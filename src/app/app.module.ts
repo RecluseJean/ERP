@@ -6,14 +6,20 @@ import { AppComponent } from './app.component';
 
 //Componentes
 import { ComponentsModule } from './pages/components/components.module';
-//Signin
+//Signin-Signup
 import { SignInModule } from './pages/sign-in/sign-in.module';
+import { SignUpModule } from './pages/sign-up/sign-up.module';
+
 //Password
 import { PasswordModule } from './pages/password/password.module';
 //Dashboard
-import { DashboardModule } from './pages/dashboard/dashboard.module';
-import { SignUpModule } from './pages/sign-up/sign-up.module';
-
+import { ComprasModule } from './pages/modulos/compras/compras.module';
+import { VentasModule } from './pages/modulos/ventas/ventas.module';
+import { TesoreriaModule } from './pages/modulos/tesoreria/tesoreria.module';
+import { AlmacenesModule } from './pages/modulos/almacenes/almacenes.module';
+import { ContabilidadModule } from './pages/modulos/contabilidad/contabilidad.module';
+import { ConfiguracionModule } from './pages/modulos/configuracion/configuracion.module';
+import { PuntoVentaModule } from './pages/modulos/punto-venta/punto-venta.module';
 
 @NgModule({
   declarations: [
@@ -21,14 +27,23 @@ import { SignUpModule } from './pages/sign-up/sign-up.module';
        
   ],
   imports: [
-    BrowserModule,
-    SignInModule,
-    DashboardModule,
-    PasswordModule,
+    BrowserModule,    
     AppRoutingModule,
 
     ComponentsModule,
-    SignUpModule
+
+    PasswordModule,
+
+    SignInModule,
+    SignUpModule,
+
+    ComprasModule,
+    VentasModule,
+    TesoreriaModule,
+    AlmacenesModule,
+    ContabilidadModule,
+    ConfiguracionModule,
+    PuntoVentaModule
     
   ],
   providers: [],
