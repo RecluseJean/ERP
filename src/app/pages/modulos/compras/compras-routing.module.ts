@@ -55,18 +55,7 @@ const routesDash : Routes = [
       { path: 'gestion-recibos/honorario', component: RecibosComponent},
 
       { path: 'aprobaciones/orden-compra', component: OrdenCompraAprobarComponent},
-      { path: 'aprobaciones/presupuesto', component: PresupuestoAprobarComponent},
-
-      /*{ path: 'configuracion/usuarios', component: UsuariosComponent},
-      { path: 'configuracion/categoria-productos', component: CategoriaProductosComponent},
-      { path: 'configuracion/motivo-traslado', component: MotivosTrasladoComponent},
-      { path: 'configuracion/tipo-movimiento-almacen', component: TiposMovimientosAlmacenComponent},
-      { path: 'configuracion/codigos-aduana', component: CodigoAduanaComponent},
-      { path: 'configuracion/proyecto', component: ProyectosComponent},
-      { path: 'configuracion/marcas', component: MarcasComponent},
-      { path: 'configuracion/responsable', component: ResponsableComponent},
-      { path: 'configuracion/tipos-concepto', component: TiposConceptoComponent},
-      { path: 'configuracion/unidades-medida', component: UnidadesMedidaComponent}, */    
+      { path: 'aprobaciones/presupuesto', component: PresupuestoAprobarComponent},  
             
     ]
   }

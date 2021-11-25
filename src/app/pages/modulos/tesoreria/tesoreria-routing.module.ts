@@ -18,10 +18,8 @@ const routesDash : Routes = [
     children: [
 
       { path: '', redirectTo: 'home', pathMatch: 'full' },    
-      { path: 'documentos', redirectTo: 'documentos/cotizacion', pathMatch: 'full' },  
-      { path: 'catalogos', redirectTo: 'catalogos/clientes', pathMatch: 'full' },  
-  
-
+      { path: 'pagos-cobranza', redirectTo: 'pagos-cobranza/cuentas-pagar', pathMatch: 'full' },  
+ 
       { path: 'home', component: HomeComponent},
  
       { path: 'pagos-cobranza/cuentas-pagar', component: CuentasPagarComponent},

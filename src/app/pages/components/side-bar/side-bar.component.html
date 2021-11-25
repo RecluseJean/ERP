@@ -72,18 +72,20 @@
 ***********************************-->
 
 <div class="deznav">
-    <div class="deznav-scroll">
-		<ul class="metismenu" id="menu">
+
+    <!--Compras *ngIf()=""-->
+    <div *ngIf="this.isViewCompras" class="deznav-scroll">
+		<ul  class="metismenu" id="menu">
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 					<i class="fa fa-files-o"></i>
 					<span class="nav-text">Documentos</span>
 				</a>
                 <ul aria-expanded="false">
-					<li><a routerLink="/dashboard/documentos/presupuestos" >Presupuestos</a></li>
-					<li><a routerLink="/dashboard/documentos/orden-compra" >Orden de Compra</a></li>
-					<li><a routerLink="/dashboard/documentos/documentos-compra" >Documentos de Compra</a></li>
-					<li><a routerLink="/dashboard/documentos/notas-credito-debito" >Notas de Crédito/Débito</a></li>
+					<li><a routerLink="/compras/documentos/presupuestos" >Presupuestos</a></li>
+					<li><a routerLink="/compras/documentos/orden-compra" >Orden de Compra</a></li>
+					<li><a routerLink="/compras/documentos/documentos-compra" >Documentos de Compra</a></li>
+					<li><a routerLink="/compras/documentos/notas-credito-debito" >Notas de Crédito/Débito</a></li>
 				</ul>
             </li>
             <li>
@@ -92,8 +94,8 @@
 					<span class="nav-text">Catálogos</span>
 				</a>
                 <ul aria-expanded="false">
-                    <li><a routerLink="/dashboard/catalogos/productos" >Proveedores</a></li>                  
-                    <li><a routerLink="/dashboard/catalogos/proveedores" >Productos</a></li>                  
+                    <li><a routerLink="/compras/catalogos/productos" >Proveedores</a></li>                  
+                    <li><a routerLink="/compras/catalogos/proveedores" >Productos</a></li>                  
                 </ul>
             </li>
             <li>
@@ -102,7 +104,7 @@
                     <span class="nav-text">Movimientos</span>
 			    </a>
                 <ul aria-expanded="false">
-                    <li><a routerLink="/dashboard/movimientos/mercaderia" >Movimientos Mercadería</a></li>
+                    <li><a routerLink="/compras/movimientos/mercaderia" >Movimientos Mercadería</a></li>
                 </ul>
             </li>
             <li>
@@ -111,10 +113,10 @@
                     <span class="nav-text">Gestión de Recibos</span>
 			    </a>
                 <ul aria-expanded="false">
-                    <li><a routerLink="/dashboard/gestion-recibos/impuestos-honorario" >Impuestos Honorarios</a></li>
-                    <li><a routerLink="/dashboard/gestion-recibos/tipos-honorario" >Tipos de Honorarios</a></li>
-                    <li><a routerLink="/dashboard/gestion-recibos/recibos" >Recibos</a></li>
-                    <li><a routerLink="/dashboard/gestion-recibos/honorario" >Honorarios</a></li>
+                    <li><a routerLink="/compras/gestion-recibos/impuestos-honorario" >Impuestos Honorarios</a></li>
+                    <li><a routerLink="/compras/gestion-recibos/tipos-honorario" >Tipos de Honorarios</a></li>
+                    <li><a routerLink="/compras/gestion-recibos/recibos" >Recibos</a></li>
+                    <li><a routerLink="/compras/gestion-recibos/honorario" >Honorarios</a></li>
                 </ul>
             </li>
             <li>
@@ -123,8 +125,8 @@
                     <span class="nav-text">Aprobaciones</span>
 				</a>
                 <ul aria-expanded="false">
-                    <li><a routerLink="/dashboard/aprobaciones/orden-compra" >Orden de Compra por Aprobar</a></li>
-                    <li><a routerLink="/dashboard/aprobaciones/presupuesto" >Presupuesto por Aprobar</a></li>
+                    <li><a routerLink="/compras/aprobaciones/orden-compra" >Orden de Compra por Aprobar</a></li>
+                    <li><a routerLink="/compras/aprobaciones/presupuesto" >Presupuesto por Aprobar</a></li>
                 </ul>
             </li>
 
@@ -134,24 +136,165 @@
                     <span class="nav-text">Configuración</span>
 				</a>
                 <ul aria-expanded="false">
-                    <li><a routerLink="/dashboard/configuracion/usuarios" >Usuarios</a></li>
-                    <li><a routerLink="/dashboard/configuracion/categoria-productos" >Categoría de Productos</a></li>
-                    <li><a routerLink="/dashboard/configuracion/motivo-traslado" >Motivos de Traslado</a></li>
-                    <li><a routerLink="/dashboard/configuracion/tipo-movimiento-almacen" >Tipo de Movimientos de Almacén</a></li>
-                    <li><a routerLink="/dashboard/configuracion/codigos-aduana" >Códigos Aduana</a></li>
-                    <li><a routerLink="/dashboard/configuracion/proyecto" >Proyectos</a></li>
-                    <li><a routerLink="/dashboard/configuracion/marcas" >Marcas</a></li>
-                    <li><a routerLink="/dashboard/configuracion/responsable" >Responsable</a></li>
-                    <li><a routerLink="/dashboard/configuracion/tipos-concepto" >Tipos de Concepto</a></li>
-                    <li><a routerLink="/dashboard/configuracion/unidades-medida" >Unidades de Medida</a></li>
+                    <li><a routerLink="/compras/configuracion/usuarios" >Usuarios</a></li>
+                    <li><a routerLink="/compras/configuracion/categoria-productos" >Categoría de Productos</a></li>
+                    <li><a routerLink="/compras/configuracion/motivo-traslado" >Motivos de Traslado</a></li>
+                    <li><a routerLink="/compras/configuracion/tipo-movimiento-almacen" >Tipo de Movimientos de Almacén</a></li>
+                    <li><a routerLink="/compras/configuracion/codigos-aduana" >Códigos Aduana</a></li>
+                    <li><a routerLink="/compras/configuracion/proyecto" >Proyectos</a></li>
+                    <li><a routerLink="/compras/configuracion/marcas" >Marcas</a></li>
+                    <li><a routerLink="/compras/configuracion/responsable" >Responsable</a></li>
+                    <li><a routerLink="/compras/configuracion/tipos-concepto" >Tipos de Concepto</a></li>
+                    <li><a routerLink="/compras/configuracion/unidades-medida" >Unidades de Medida</a></li>
                 </ul>
             </li>
             
         </ul>
-		<div class="copyright">
+        <div class="copyright">
 			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
 		</div>
-	</div>
+    </div>
+
+    <!--Ventas-->
+    <div *ngIf="this.isViewVentas" class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="fa fa-files-o"></i>
+					<span class="nav-text">Documentos</span>
+				</a>
+                <ul aria-expanded="false">
+					<li><a routerLink="/ventas/documentos/cotizacion" >Cotización</a></li>
+					<li><a routerLink="/ventas/documentos/nota-pedido" >Nota Pedido</a></li>
+					<li><a routerLink="/ventas/documentos/documento-venta" >Documentos de Ventas</a></li>
+				</ul>
+            </li>
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="fa fa-files-o"></i>
+					<span class="nav-text">Catálogos</span>
+				</a>
+                <ul aria-expanded="false">
+					<li><a routerLink="/ventas/catalogos/clientes" >Productos</a></li>
+					<li><a routerLink="/ventas/catalogos/productos" >Clientes</a></li>
+				</ul>
+            </li>
+        </ul>
+        <div class="copyright">
+			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+		</div>
+    </div>
+
+    <!--Tesoreria-->      
+    <div *ngIf="this.isViewTesoreria" class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="fa fa-files-o"></i>
+					<span class="nav-text">Pagos y Cobranzas</span>
+				</a>
+                <ul aria-expanded="false">
+					<li><a routerLink="/tesoreria/pagos-cobranza/cuentas-pagar" >Cuentas por Pagar</a></li>
+					<li><a routerLink="/tesoreria/pagos-cobranza/cuentas-cobrar" >Cuentas por Cobrar</a></li>
+					<li><a routerLink="/tesoreria/pagos-cobranza/constancias" >Constancias de Pagos y Cobros</a></li>
+					<li><a routerLink="/tesoreria/pagos-cobranza/pagos-cobros" >Pagos y Cobros Múltiples</a></li>
+				</ul>
+            </li>            
+        </ul>
+        <div class="copyright">
+			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+		</div>
+    </div>
+    
+    <!--Almacenes-->
+    <div *ngIf="this.isViewAlmacen" class="deznav-scroll">
+        <ul  class="metismenu" id="menu">
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Catálogos</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/almacenes/catalogos/productos" >Productos</a></li>
+                    <li><a routerLink="/almacenes/catalogos/clientes" >Clientes</a></li>
+                    <li><a routerLink="/almacenes/catalogos/proveedores" >Proveedores</a></li>
+                </ul>
+            </li>  
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Movimientos</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/almacenes/movimientos/guias-entrada" >Guías de Entrada</a></li>
+                    <li><a routerLink="/almacenes/movimientos/guias-salida" >Guías de Salida</a></li>
+                    <li><a routerLink="/almacenes/movimientos/mercaderia" >Movimientos de Mercadería</a></li>
+                </ul>
+            </li>          
+        </ul>
+        <div class="copyright">
+			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+		</div>
+    </div>
+    
+    <!--Contabilidad-->
+    <div *ngIf="this.isViewContabilidad" class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Contable</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/contabilidad/contable/plan-cuentas" >Plan de Cuentas</a></li>
+                    <li><a routerLink="/contabilidad/contable/plantilla-asientos" >Plantilla de Asientos</a></li>
+                    <li><a routerLink="/contabilidad/contable/asientos" >Asientos</a></li>
+                </ul>
+            </li>  
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Planilla</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/contabilidad/planilla/empleados" >Empleados</a></li>
+                </ul>
+            </li>  
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Reportes</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/contabilidad/reportes/reportes-contables" >Reportes Contables</a></li>
+                </ul>
+            </li>          
+        </ul>
+        <div class="copyright">
+			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+		</div>
+    </div>
+
+    <!--Punto Venta-->   
+    <div *ngIf="this.isViewPuntoVenta" class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Documentos</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/puntos-ventas/documentos/venta-directa" >Venta Directa</a></li>
+                    <li><a routerLink="/puntos-ventas/documentos/sesiones" >Sesiones</a></li>
+                </ul>
+            </li>                   
+        </ul>
+        <div class="copyright">
+			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+		</div>
+    </div>
+        
+		
 </div>
 
 <!--**********************************

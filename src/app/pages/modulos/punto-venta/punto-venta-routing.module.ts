@@ -9,14 +9,12 @@ import { SesionesComponent } from './documentos/sesiones/sesiones.component';
 
 const routesDash : Routes = [
   {
-    path: 'puntos-ventas', component: PuntoVentaComponent,
+    path: 'punto-venta', component: PuntoVentaComponent,
     children: [
 
       { path: '', redirectTo: 'home', pathMatch: 'full' },    
-      { path: 'documentos', redirectTo: 'documentos/cotizacion', pathMatch: 'full' },  
-      { path: 'catalogos', redirectTo: 'catalogos/clientes', pathMatch: 'full' },  
+      { path: 'documentos', redirectTo: 'documentos/venta-directa', pathMatch: 'full' },  
   
-
       { path: 'home', component: HomeComponent},
  
       { path: 'documentos/venta-directa', component: VentaDirectaComponent},

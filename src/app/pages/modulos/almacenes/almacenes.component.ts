@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { TokenStorageService } from 'src/app/util/token-storage.service';
 
 @Component({
   selector: 'app-almacenes',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlmacenesComponent implements OnInit {
 
-  constructor() { }
+  a: any;
+
+  constructor( private token : TokenStorageService) { }
 
   ngOnInit(): void {
+    this.asignarId()
+  }
+
+  asignarId(){
+    this.a = "Almacenes";
+    this.token.saveSideBar(this.a)
   }
 
 }

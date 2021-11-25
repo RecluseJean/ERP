@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-const TITLE_KEY = 'auth-title';
+const SIDE_KEY = 'auth-side';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +14,13 @@ export class TokenStorageService {
     window.localStorage.clear();
   }
 
-  public saveTitle(title: string): void {
-    window.localStorage.removeItem(TITLE_KEY);
-    window.localStorage.setItem(TITLE_KEY, title);
+  public saveSideBar(side: string): void {
+    window.localStorage.removeItem(SIDE_KEY);
+    window.localStorage.setItem(SIDE_KEY, side);
   }
 
-  public getTitle(): string | null {
-    return window.localStorage.getItem(TITLE_KEY);
+  public getSideBar(): string | null {
+    return window.localStorage.getItem(SIDE_KEY);
   }
 
 

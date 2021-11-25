@@ -15,12 +15,13 @@ import { ReportesContablesComponent } from './reportes/reportes-contables/report
 
 const routesDash : Routes = [
   {
-    path: 'ventas', component: ContabilidadComponent,
+    path: 'contabilidad', component: ContabilidadComponent,
     children: [
 
       { path: '', redirectTo: 'home', pathMatch: 'full' },    
-      { path: 'documentos', redirectTo: 'documentos/cotizacion', pathMatch: 'full' },  
-      { path: 'catalogos', redirectTo: 'catalogos/clientes', pathMatch: 'full' },    
+      { path: 'contable', redirectTo: 'contable/plan-cuentas', pathMatch: 'full' },  
+      { path: 'planilla', redirectTo: 'planilla/empleados', pathMatch: 'full' },    
+      { path: 'reportes', redirectTo: 'reportes/reportes-contables', pathMatch: 'full' },    
 
       { path: 'home', component: HomeComponent},
  

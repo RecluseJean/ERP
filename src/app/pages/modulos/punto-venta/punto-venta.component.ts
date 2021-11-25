@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenStorageService } from 'src/app/util/token-storage.service';
 
 @Component({
   selector: 'app-punto-venta',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: []
 })
 export class PuntoVentaComponent implements OnInit {
+  a: any;
 
-  constructor() { }
+  constructor( private token : TokenStorageService) { }
 
   ngOnInit(): void {
+    this.asignarId()
+  }
+
+  asignarId(){
+    this.a = "PuntoVenta";
+    this.token.saveSideBar(this.a)
   }
 
 }
