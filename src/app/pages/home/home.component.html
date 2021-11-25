@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Planillas</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/favicon.png">    
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+
+    <!-- Main wrapper start -->
+    <div id="main-wrapper">
+        
+		<!-- Header start 
+        <app-header></app-header>-->
+        <!-- Header end ti-comment-alt -->
+
+         <!-- Sidebar start -->
+         <div class="nav-header">
+            <a style="cursor:pointer;" class="brand-logo">
+                <img class="logo-abbr" src="../../../assets/images/Logo Planillas/Recurso1x.png" alt="">
+                <img class="logo-compact" src="../../../assets/images/logo-text.png" alt="">
+                <img class="brand-title" src="../../../assets/images/Logo Planillas/Recurso2.png" alt="">
+            </a>
+        
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+                Nav header end
+        ***********************************-->
+        
+        <!--**********************************
+                Header start
+        ***********************************-->
+        
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="dashboard_bar">
+                                Dashboard
+                            </div>
+                        </div>
+                        <ul class="navbar-nav header-right">		
+                            
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
+                                    <img src="../../../assets/images/profile/17.jpg" width="20" alt=""/>
+                                    <div class="header-info">
+                                        <span class="text-black"><strong>Charles Xavier</strong></span>
+                                        <p class="fs-12 mb-0">Super Admin</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="" class="dropdown-item ai-icon">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        <span class="ml-2">Perfil </span>
+                                    </a>
+                                    <a href="" class="dropdown-item ai-icon">
+                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        <span class="ml-2">Mensajes </span>
+                                    </a>
+                                    <a href="" class="dropdown-item ai-icon">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span class="ml-2">Cerrar Sesión </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div> 	        			        
+                       
+        <!--**********************************
+                Header end ti-comment-alt
+        ***********************************-->
+        
+        <!--**********************************
+                Sidebar start
+        ***********************************-->
+        
+        <div class="deznav">
+        
+            <!--Compras *ngIf()=""-->
+            <div *ngIf="this.isViewCompras" class="deznav-scroll">
+                <ul  class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Documentos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/compras/documentos/presupuestos" >Presupuestos</a></li>
+                            <li><a href="/compras/documentos/orden-compra" >Orden de Compra</a></li>
+                            <li><a href="/compras/documentos/documentos-compra" >Documentos de Compra</a></li>
+                            <li><a href="/compras/documentos/notas-credito-debito" >Notas de Crédito/Débito</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-book"></i>
+                            <span class="nav-text">Catálogos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/compras/catalogos/productos" >Proveedores</a></li>                  
+                            <li><a href="/compras/catalogos/proveedores" >Productos</a></li>                  
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-notepad"></i>
+                            <span class="nav-text">Movimientos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/compras/movimientos/mercaderia" >Movimientos Mercadería</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-calculator-1"></i>
+                            <span class="nav-text">Gestión de Recibos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/compras/gestion-recibos/impuestos-honorario" >Impuestos Honorarios</a></li>
+                            <li><a href="/compras/gestion-recibos/tipos-honorario" >Tipos de Honorarios</a></li>
+                            <li><a href="/compras/gestion-recibos/recibos" >Recibos</a></li>
+                            <li><a href="/compras/gestion-recibos/honorario" >Honorarios</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-check-square"></i>
+                            <span class="nav-text">Aprobaciones</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/compras/aprobaciones/orden-compra" >Orden de Compra por Aprobar</a></li>
+                            <li><a href="/compras/aprobaciones/presupuesto" >Presupuesto por Aprobar</a></li>
+                        </ul>
+                    </li>
+        
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-cogs"></i>
+                            <span class="nav-text">Configuración</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/compras/configuracion/usuarios" >Usuarios</a></li>
+                            <li><a href="/compras/configuracion/categoria-productos" >Categoría de Productos</a></li>
+                            <li><a href="/compras/configuracion/motivo-traslado" >Motivos de Traslado</a></li>
+                            <li><a href="/compras/configuracion/tipo-movimiento-almacen" >Tipo de Movimientos de Almacén</a></li>
+                            <li><a href="/compras/configuracion/codigos-aduana" >Códigos Aduana</a></li>
+                            <li><a href="/compras/configuracion/proyecto" >Proyectos</a></li>
+                            <li><a href="/compras/configuracion/marcas" >Marcas</a></li>
+                            <li><a href="/compras/configuracion/responsable" >Responsable</a></li>
+                            <li><a href="/compras/configuracion/tipos-concepto" >Tipos de Concepto</a></li>
+                            <li><a href="/compras/configuracion/unidades-medida" >Unidades de Medida</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <div class="copyright">
+                    <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+                </div>
+            </div>
+        
+            <!--Ventas-->
+            <div *ngIf="this.isViewVentas" class="deznav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Documentos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/ventas/documentos/cotizacion" >Cotización</a></li>
+                            <li><a href="/ventas/documentos/nota-pedido" >Nota Pedido</a></li>
+                            <li><a href="/ventas/documentos/documento-venta" >Documentos de Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Catálogos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/ventas/catalogos/clientes" >Productos</a></li>
+                            <li><a href="/ventas/catalogos/productos" >Clientes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+                </div>
+            </div>
+        
+            <!--Tesoreria-->      
+            <div *ngIf="this.isViewTesoreria" class="deznav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Pagos y Cobranzas</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/tesoreria/pagos-cobranza/cuentas-pagar" >Cuentas por Pagar</a></li>
+                            <li><a href="/tesoreria/pagos-cobranza/cuentas-cobrar" >Cuentas por Cobrar</a></li>
+                            <li><a href="/tesoreria/pagos-cobranza/constancias" >Constancias de Pagos y Cobros</a></li>
+                            <li><a href="/tesoreria/pagos-cobranza/pagos-cobros" >Pagos y Cobros Múltiples</a></li>
+                        </ul>
+                    </li>            
+                </ul>
+                <div class="copyright">
+                    <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+                </div>
+            </div>
+            
+            <!--Almacenes-->
+            <div *ngIf="this.isViewAlmacen" class="deznav-scroll">
+                <ul  class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Catálogos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/almacenes/catalogos/productos" >Productos</a></li>
+                            <li><a href="/almacenes/catalogos/clientes" >Clientes</a></li>
+                            <li><a href="/almacenes/catalogos/proveedores" >Proveedores</a></li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Movimientos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/almacenes/movimientos/guias-entrada" >Guías de Entrada</a></li>
+                            <li><a href="/almacenes/movimientos/guias-salida" >Guías de Salida</a></li>
+                            <li><a href="/almacenes/movimientos/mercaderia" >Movimientos de Mercadería</a></li>
+                        </ul>
+                    </li>          
+                </ul>
+                <div class="copyright">
+                    <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+                </div>
+            </div>
+            
+            <!--Contabilidad-->
+            <div *ngIf="this.isViewContabilidad" class="deznav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Contable</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/contabilidad/contable/plan-cuentas" >Plan de Cuentas</a></li>
+                            <li><a href="/contabilidad/contable/plantilla-asientos" >Plantilla de Asientos</a></li>
+                            <li><a href="/contabilidad/contable/asientos" >Asientos</a></li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Planilla</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/contabilidad/planilla/empleados" >Empleados</a></li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Reportes</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/contabilidad/reportes/reportes-contables" >Reportes Contables</a></li>
+                        </ul>
+                    </li>          
+                </ul>
+                <div class="copyright">
+                    <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+                </div>
+            </div>
+        
+            <!--Punto Venta-->   
+            <div *ngIf="this.isViewPuntoVenta" class="deznav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Documentos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/puntos-ventas/documentos/venta-directa" >Venta Directa</a></li>
+                            <li><a href="/puntos-ventas/documentos/sesiones" >Sesiones</a></li>
+                        </ul>
+                    </li>                   
+                </ul>
+                <div class="copyright">
+                    <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+                </div>
+            </div>
+                
+                
+        </div>
+        
+        <!--**********************************
+                    Sidebar end
+        ***********************************-->        
+        <!-- Sidebar end -->
+		
+        <!-- Content body start -->
+        <div class="content-body">
+        </div>
+        
+
+        <!-- Content body end -->
+
+        <!-- Footer start -->
+       <app-footer></app-footer>
+        <!-- Footer end -->
+
+    </div>
+    <!-- Main wrapper end -->
+
+</body>
+
+</html>
+
+

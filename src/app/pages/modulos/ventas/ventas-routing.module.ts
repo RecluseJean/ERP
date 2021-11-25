@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { VentasComponent } from './ventas.component';
 
-import { HomeComponent } from '../../components/home/home.component';
-
 import { CotizacionComponent } from './documentos/cotizacion/cotizacion.component';
 import { NotaPedidoComponent } from './documentos/nota-pedido/nota-pedido.component';
 import { DocumentosVentasComponent } from './documentos/documentos-ventas/documentos-ventas.component';
@@ -20,12 +18,9 @@ const routesDash : Routes = [
     path: 'ventas', component: VentasComponent,
     children: [
 
-      { path: '', redirectTo: 'home', pathMatch: 'full' },    
+      { path: '', redirectTo: 'documentos/cotizacion', pathMatch: 'full' },    
       { path: 'documentos', redirectTo: 'documentos/cotizacion', pathMatch: 'full' },  
       { path: 'catalogos', redirectTo: 'catalogos/clientes', pathMatch: 'full' },  
-  
-
-      { path: 'home', component: HomeComponent},
  
       { path: 'documentos/cotizacion', component: CotizacionComponent},
       { path: 'documentos/nota-pedido', component: NotaPedidoComponent},

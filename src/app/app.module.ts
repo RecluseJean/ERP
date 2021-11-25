@@ -13,6 +13,7 @@ import { SignUpModule } from './pages/sign-up/sign-up.module';
 //Password
 import { PasswordModule } from './pages/password/password.module';
 //Dashboard
+import { HomeModule } from './pages/home/home.module';
 import { ComprasModule } from './pages/modulos/compras/compras.module';
 import { VentasModule } from './pages/modulos/ventas/ventas.module';
 import { TesoreriaModule } from './pages/modulos/tesoreria/tesoreria.module';
@@ -31,6 +32,8 @@ import { PuntoVentaModule } from './pages/modulos/punto-venta/punto-venta.module
     AppRoutingModule,
 
     ComponentsModule,
+
+    HomeModule,
 
     PasswordModule,
 

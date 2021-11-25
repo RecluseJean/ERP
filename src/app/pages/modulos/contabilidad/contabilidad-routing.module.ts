@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContabilidadComponent } from './contabilidad.component';
 
-import { HomeComponent } from '../../components/home/home.component';
-
 import { PlanCuentasComponent } from './contable/plan-cuentas/plan-cuentas.component';
 import { PlanillaAsientosComponent } from './contable/planilla-asientos/planilla-asientos.component';
 import { AsientosComponent } from './contable/asientos/asientos.component';
@@ -18,12 +16,10 @@ const routesDash : Routes = [
     path: 'contabilidad', component: ContabilidadComponent,
     children: [
 
-      { path: '', redirectTo: 'home', pathMatch: 'full' },    
+      { path: '', redirectTo: 'contable/plan-cuentas', pathMatch: 'full' },    
       { path: 'contable', redirectTo: 'contable/plan-cuentas', pathMatch: 'full' },  
       { path: 'planilla', redirectTo: 'planilla/empleados', pathMatch: 'full' },    
-      { path: 'reportes', redirectTo: 'reportes/reportes-contables', pathMatch: 'full' },    
-
-      { path: 'home', component: HomeComponent},
+      { path: 'reportes', redirectTo: 'reportes/reportes-contables', pathMatch: 'full' },  
  
       { path: 'contable/plan-cuentas', component: PlanCuentasComponent},       
       { path: 'contable/plantilla-asientos', component: PlanillaAsientosComponent},       

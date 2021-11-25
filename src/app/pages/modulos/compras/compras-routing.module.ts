@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ComprasComponent } from './compras.component';
 
-import { HomeComponent } from '../../components/home/home.component';
-
 import { PresupuestoComponent } from './documentos/presupuesto/presupuesto.component';
 import { OrdenCompraComponent } from './documentos/orden-compra/orden-compra.component';
 import { DocumentoCompraComponent } from './documentos/documento-compra/documento-compra.component';
@@ -29,15 +27,13 @@ const routesDash : Routes = [
     path: 'compras', component: ComprasComponent,
     children: [
 
-      { path: '', redirectTo: 'home', pathMatch: 'full' },    
+      { path: '', redirectTo: 'documentos/presupuestos', pathMatch: 'full' },    
       { path: 'documentos', redirectTo: 'documentos/presupuestos', pathMatch: 'full' },  
       { path: 'catalogos', redirectTo: 'catalogos/productos', pathMatch: 'full' },  
       { path: 'movimientos', redirectTo: 'movimientos/mercaderia', pathMatch: 'full' },  
       { path: 'gestion-recibos', redirectTo: 'gestion-recibos/impuestos-honorario', pathMatch: 'full' },  
       { path: 'aprobaciones', redirectTo: 'aprobaciones/orden-compra', pathMatch: 'full' },  
       { path: 'configuracion', redirectTo: 'catalogos/productos', pathMatch: 'full' },  
-
-      { path: 'home', component: HomeComponent},
  
       { path: 'documentos/presupuestos', component: PresupuestoComponent},
       { path: 'documentos/orden-compra', component: OrdenCompraComponent},

@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AlmacenesComponent } from './almacenes.component';
 
-import { HomeComponent } from '../../components/home/home.component';
-
 import { ProductosComponent } from './catalogos/productos/productos.component';
 import { ClientesComponent } from './catalogos/clientes/clientes.component';
 import { ProveedoresComponent } from './catalogos/proveedores/proveedores.component';
@@ -22,11 +20,9 @@ const routesDash : Routes = [
     path: 'almacenes', component: AlmacenesComponent,
     children: [
 
-      { path: '', redirectTo: 'home', pathMatch: 'full' },    
+      { path: '', redirectTo: 'catalogos/productos', pathMatch: 'full' },    
       { path: 'catalogos', redirectTo: 'catalogos/productos', pathMatch: 'full' },    
-      { path: 'movimientos', redirectTo: 'movimientos/guias-entrada', pathMatch: 'full' },    
-
-      { path: 'home', component: HomeComponent},
+      { path: 'movimientos', redirectTo: 'movimientos/guias-entrada', pathMatch: 'full' },  
 
       { path: 'catalogos/productos', component: ProductosComponent},
       { path: 'catalogos/clientes', component: ClientesComponent},

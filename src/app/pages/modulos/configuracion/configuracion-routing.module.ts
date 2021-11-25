@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ConfiguracionComponent } from './configuracion.component';
 
-import { HomeComponent } from '../../components/home/home.component';
-
 import { AreasComponent } from './planilla/areas/areas.component';
 import { CargosComponent } from './planilla/cargos/cargos.component';
 import { EmpleadosComponent } from './planilla/empleados/empleados.component';
@@ -24,12 +22,10 @@ const routesDash : Routes = [
     path: 'configuracion', component: ConfiguracionComponent,
     children: [
 
-      { path: '', redirectTo: 'home', pathMatch: 'full' },    
+      { path: '', redirectTo: 'planilla/areas', pathMatch: 'full' },    
       { path: 'planilla', redirectTo: 'planilla/areas', pathMatch: 'full' },  
       { path: 'administrar-erp', redirectTo: 'administrar-erp/modulos', pathMatch: 'full' },    
       { path: 'correos', redirectTo: 'correos/cuentas-correos', pathMatch: 'full' },    
-
-      { path: 'home', component: HomeComponent},
  
       { path: 'planilla/areas', component: AreasComponent},       
       { path: 'planilla/cargos', component: CargosComponent},       

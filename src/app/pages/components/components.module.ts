@@ -6,7 +6,6 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ListadoBusquedaComponent } from './listado-busqueda/listado-busqueda.component';
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { HomeComponent } from './home/home.component';
     SideBarComponent,
     FooterComponent,
     ListadoBusquedaComponent,
-    HomeComponent,
   ],
   imports: [
     CommonModule,
