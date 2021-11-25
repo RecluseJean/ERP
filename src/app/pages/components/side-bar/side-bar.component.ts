@@ -36,32 +36,26 @@ export class SideBarComponent implements OnInit {
       switch (this.id) {
         case "Compras":   
           this.isViewCompras = true;
-          console.log(this.id)
           break;
 
         case "Ventas":   
           this.isViewVentas = true;
-          console.log(this.id)
           break;
 
         case "Tesoreria":   
           this.isViewTesoreria = true;
-          console.log(this.id)
           break;
 
         case "Almacenes":   
           this.isViewAlmacen = true;
-          console.log(this.id)
           break;
 
         case "Contabilidad":   
           this.isViewContabilidad = true;
-          console.log(this.id)
           break;  
 
         case "PuntoVenta":   
           this.isViewPuntoVenta = true;
-          console.log(this.id)
           break;
       
         default:
