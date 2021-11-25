@@ -70,7 +70,7 @@ export class HomeComponent implements OnInit {
       }
 
     }else{
-      this.id = 1;
+      this.isViewCompras = true;
     }
     
   }   
