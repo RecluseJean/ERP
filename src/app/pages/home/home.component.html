@@ -219,8 +219,26 @@
                             <li><a href="/tesoreria/pagos-cobranza/constancias" >Constancias de Pagos y Cobros</a></li>
                             <li><a href="/tesoreria/pagos-cobranza/pagos-cobros" >Pagos y Cobros Múltiples</a></li>
                         </ul>
+                    </li>  
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Configuración</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/tesoreria/configuracion/punto-venta" >Punto de Venta</a></li>
+                            <li><a href="/tesoreria/configuracion/series" >Series</a></li>
+                            <li><a href="/tesoreria/configuracion/bancos-empresa" >Bancos Empresas</a></li>
+                            <li><a href="/tesoreria/configuracion/cajas" >Cajas</a></li>
+                            <li><a href="/tesoreria/configuracion/cemtro-costos" >Centro de Costos</a></li>
+                            <li><a href="/tesoreria/configuracion/tipo-cambio" >Tipo de Cambio</a></li>
+                            <li><a href="/tesoreria/configuracion/periodos" >Periodos</a></li>
+                            <li><a href="/tesoreria/configuracion/marcas-tarjetas" >Marcas de Tarjetas</a></li>
+                            <li><a href="/tesoreria/configuracion/conciliaciones" >Conciliación</a></li>					
+                        </ul>
                     </li>            
                 </ul>
+                
                 <div class="copyright">
                     <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
                 </div>
@@ -250,7 +268,19 @@
                             <li><a href="/almacenes/movimientos/guias-salida" >Guías de Salida</a></li>
                             <li><a href="/almacenes/movimientos/mercaderia" >Movimientos de Mercadería</a></li>
                         </ul>
-                    </li>          
+                    </li>  
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Configuración</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/almacenes/configuracion/categoria-productos" >Categoría de Productos</a></li>
+                            <li><a href="/almacenes/configuracion/almacen" >Almacén</a></li>
+                            <li><a href="/almacenes/configuracion/tipo-movimiento-almacen" >Tipo de Movimientos de Almacén</a></li>
+                            <li><a href="/almacenes/configuracion/marcas" >Marcas</a></li>
+                        </ul>
+                    </li>        
                 </ul>
                 <div class="copyright">
                     <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
@@ -288,7 +318,22 @@
                         <ul aria-expanded="false">
                             <li><a href="/contabilidad/reportes/reportes-contables" >Reportes Contables</a></li>
                         </ul>
-                    </li>          
+                    </li>  
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Configuración</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/contabilidad/configuracion/nivel-cuenta" >Nivel de Cuenta</a></li>
+                            <li><a href="/contabilidad/configuracion/rubro-contable" >Rubro Contable</a></li>
+                            <li><a href="/contabilidad/configuracion/tipo-cuenta-bancaria" >Tipo de Cuenta Bancaria</a></li>
+                            <li><a href="/contabilidad/configuracion/tipo-opracion" >Tipo de Operación</a></li>
+                            <li><a href="/contabilidad/configuracion/tipo-analisis" >Tipo de Análisis</a></li>
+                            <li><a href="/contabilidad/configuracion/tipo-cuentas" >Tipo de Cuentas</a></li>
+                            <li><a href="/contabilidad/configuracion/pais-cuenta-equivalente" >País Cuenta Equivalente</a></li>
+                        </ul>
+                    </li>                
                 </ul>
                 <div class="copyright">
                     <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
@@ -313,14 +358,73 @@
                     <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
                 </div>
             </div>
-                
-                
+
+            <!--Configuracion-->
+            <div *ngIf="this.isViewConfiguracion" class="deznav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Planilla</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/configuracion/planilla/areas" >Áreas</a></li>
+                            <li><a href="/configuracion/planilla/cargos" >Cargos</a></li>
+                            <li><a href="/configuracion/planilla/empleados" >Empleados</a></li>
+                        </ul>
+                    </li>      
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Administrar ERP</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/configuracion/administrar-erp/modulos" >Módulos</a></li>
+                            <li><a href="/configuracion/administrar-erp/paginas" >Páginas</a></li>
+                            <li><a href="/configuracion/administrar-erp/agrupadores" >Agrupadores</a></li>
+                            <li><a href="/configuracion/administrar-erp/planes" >Planes</a></li>
+                            <li><a href="/configuracion/administrar-erp/cuentas" >Cuentas</a></li>
+                            <li><a href="/configuracion/administrar-erp/tareas" >Tareas</a></li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Correos</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/configuracion/correos/cuentas-correos" >Cuentas de Correo</a></li>
+                            <li><a href="/configuracion/correos/plantillas-correo" >Plantillas de Correo</a></li>
+                        </ul>
+                    </li>     
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-text">Configuración</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/configuracion/configuracion/usuarios" >Usuarios</a></li>
+                            <li><a href="/configuracion/configuracion/bancos" >Bancos</a></li>
+                            <li><a href="/configuracion/configuracion/perfiles" >Perfiles</a></li>
+                            <li><a href="/configuracion/configuracion/tipo-moneda" >Tipo de Moneda</a></li>
+                            <li><a href="/configuracion/configuracion/condiciones-pago" >Condiciones de Pago</a></li>
+                            <li><a href="/configuracion/configuracion/parametros" >Parametros</a></li>
+                            <li><a href="/configuracion/configuracion/empresas" >Empresas</a></li>
+                            <li><a href="/configuracion/configuracion/almacen" >Almacén</a></li>
+                            <li><a href="/configuracion/configuracion/locales" >Locales</a></li>
+                            <li><a href="/configuracion/configuracion/proyecto" >Proyecto</a></li>
+                        </ul>
+                    </li>              
+                </ul>
+                <div class="copyright">
+                    <p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+                </div>
+            </div>      
         </div>
         
         <!--**********************************
                     Sidebar end
         ***********************************-->        
-        <!-- Sidebar end -->
 		
         <!-- Content body start -->
         <div class="content-body">
@@ -328,9 +432,10 @@
                 <div>
                     <div>
                         <div class="row">
+                            
                             <div class="col-sm-4">
 								<div class="card avtivity-card">
-                                    <a href="../modulos/almacenes/catalogos/productos/productos.component.html">
+                                    <a href="/compras">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <span class="activity-icon bgl-success mr-md-4 mr-3">
@@ -357,7 +462,7 @@
 
                             <div class="col-sm-4">
 								<div class="card avtivity-card">
-                                    <a href="">
+                                    <a href="/ventas">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <span class="activity-icon bgl-secondary  mr-md-4 mr-3">
@@ -379,7 +484,7 @@
 
                             <div class="col-sm-4">
 								<div class="card avtivity-card">
-                                    <a href="">
+                                    <a href="/tesoreria">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <span class="activity-icon bgl-danger mr-md-4 mr-3">
@@ -402,7 +507,7 @@
 
                             <div class="col-sm-4">
 								<div class="card avtivity-card">
-                                    <a href="">
+                                    <a href="/almacenes">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <span class="activity-icon bgl-warning  mr-md-4 mr-3">
@@ -426,7 +531,7 @@
 
                             <div class="col-sm-4">
 								<div class="card avtivity-card">
-                                    <a href="">
+                                    <a href="/contabilidad">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <span class="activity-icon bgl-primary  mr-md-4 mr-3">
@@ -450,7 +555,7 @@
 
                             <div class="col-sm-4">
 								<div class="card avtivity-card">
-                                    <a href="../modulos/almacenes/catalogos/productos/productos.component.html">
+                                    <a href="/configuracion">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <span class="activity-icon bgl-success mr-md-4 mr-3">
@@ -477,7 +582,7 @@
 
                             <div class="col-sm-4">
 								<div class="card avtivity-card">
-                                    <a href="">
+                                    <a href="/punto-venta">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <span class="activity-icon bgl-secondary  mr-md-4 mr-3">

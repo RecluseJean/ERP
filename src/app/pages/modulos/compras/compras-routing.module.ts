@@ -21,6 +21,16 @@ import { RecibosComponent } from './gestion-recibos/recibos/recibos.component';
 import { OrdenCompraAprobarComponent } from './aprobaciones/orden-compra-aprobar/orden-compra-aprobar.component';
 import { PresupuestoAprobarComponent } from './aprobaciones/presupuesto-aprobar/presupuesto-aprobar.component';
 
+import { UsuariosCComponent } from './configuracion/usuarios-c/usuarios-c.component';
+import { CategoriaProductosCComponent } from './configuracion/categoria-productos-c/categoria-productos-c.component';
+import { MotivosTrasladoCComponent } from './configuracion/motivos-traslado-c/motivos-traslado-c.component';
+import { TipoMovAlmacenCComponent } from './configuracion/tipo-mov-almacen-c/tipo-mov-almacen-c.component';
+import { CodigosAduanaCComponent } from './configuracion/codigos-aduana-c/codigos-aduana-c.component';
+import { ResponsableCComponent } from './configuracion/responsable-c/responsable-c.component';
+import { ProyectosCComponent } from './configuracion/proyectos-c/proyectos-c.component';
+import { MarcasCComponent } from './configuracion/marcas-c/marcas-c.component';
+import { TiposConceptoCComponent } from './configuracion/tipos-concepto-c/tipos-concepto-c.component';
+import { UnidadesMedidasCComponent } from './configuracion/unidades-medidas-c/unidades-medidas-c.component';
 
 const routesDash : Routes = [
   {
@@ -33,7 +43,7 @@ const routesDash : Routes = [
       { path: 'movimientos', redirectTo: 'movimientos/mercaderia', pathMatch: 'full' },  
       { path: 'gestion-recibos', redirectTo: 'gestion-recibos/impuestos-honorario', pathMatch: 'full' },  
       { path: 'aprobaciones', redirectTo: 'aprobaciones/orden-compra', pathMatch: 'full' },  
-      { path: 'configuracion', redirectTo: 'catalogos/productos', pathMatch: 'full' },  
+      { path: 'configuracion', redirectTo: 'configuracion/usuarios', pathMatch: 'full' },  
  
       { path: 'documentos/presupuestos', component: PresupuestoComponent},
       { path: 'documentos/orden-compra', component: OrdenCompraComponent},
@@ -52,6 +62,17 @@ const routesDash : Routes = [
 
       { path: 'aprobaciones/orden-compra', component: OrdenCompraAprobarComponent},
       { path: 'aprobaciones/presupuesto', component: PresupuestoAprobarComponent},  
+
+      { path: 'configuracion/usuarios', component: UsuariosCComponent},  
+      { path: 'configuracion/categoria-productos', component: CategoriaProductosCComponent},  
+      { path: 'configuracion/motivo-traslado', component: MotivosTrasladoCComponent},  
+      { path: 'configuracion/tipo-movimiento-almacen', component: TipoMovAlmacenCComponent},  
+      { path: 'configuracion/codigos-aduana', component: CodigosAduanaCComponent},  
+      { path: 'configuracion/proyectos', component: ResponsableCComponent},  
+      { path: 'configuracion/marcas', component: ProyectosCComponent},  
+      { path: 'configuracion/responsable', component: MarcasCComponent},  
+      { path: 'configuracion/tipos-concepto', component: TiposConceptoCComponent},  
+      { path: 'configuracion/unidades-medida', component: UnidadesMedidasCComponent},  
             
     ]
   }

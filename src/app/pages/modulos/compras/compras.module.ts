@@ -23,6 +23,17 @@ import { RecibosComponent } from './gestion-recibos/recibos/recibos.component';
 import { OrdenCompraAprobarComponent } from './aprobaciones/orden-compra-aprobar/orden-compra-aprobar.component';
 import { PresupuestoAprobarComponent } from './aprobaciones/presupuesto-aprobar/presupuesto-aprobar.component';
 
+import { UsuariosCComponent } from './configuracion/usuarios-c/usuarios-c.component';
+import { CategoriaProductosCComponent } from './configuracion/categoria-productos-c/categoria-productos-c.component';
+import { MotivosTrasladoCComponent } from './configuracion/motivos-traslado-c/motivos-traslado-c.component';
+import { TipoMovAlmacenCComponent } from './configuracion/tipo-mov-almacen-c/tipo-mov-almacen-c.component';
+import { CodigosAduanaCComponent } from './configuracion/codigos-aduana-c/codigos-aduana-c.component';
+import { ResponsableCComponent } from './configuracion/responsable-c/responsable-c.component';
+import { ProyectosCComponent } from './configuracion/proyectos-c/proyectos-c.component';
+import { MarcasCComponent } from './configuracion/marcas-c/marcas-c.component';
+import { TiposConceptoCComponent } from './configuracion/tipos-concepto-c/tipos-concepto-c.component';
+import { UnidadesMedidasCComponent } from './configuracion/unidades-medidas-c/unidades-medidas-c.component';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +56,17 @@ import { PresupuestoAprobarComponent } from './aprobaciones/presupuesto-aprobar/
 
     OrdenCompraAprobarComponent,
     PresupuestoAprobarComponent,
+    UsuariosCComponent,
+    CategoriaProductosCComponent,
+    MotivosTrasladoCComponent,
+    TipoMovAlmacenCComponent,
+    CodigosAduanaCComponent,
+   
+    ResponsableCComponent,
+    ProyectosCComponent,
+    MarcasCComponent,
+    TiposConceptoCComponent,
+    UnidadesMedidasCComponent,
 
   ],
 

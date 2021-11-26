@@ -15,7 +15,8 @@ export class SideBarComponent implements OnInit {
   isViewAlmacen = false;
   isViewContabilidad = false;
   isViewPuntoVenta = false;
-  
+  isViewConfiguracion = false;
+
   constructor( private token : TokenStorageService ) { }
 
   ngOnInit(): void {
@@ -32,6 +33,8 @@ export class SideBarComponent implements OnInit {
       this.isViewAlmacen = false;
       this.isViewContabilidad = false;
       this.isViewPuntoVenta = false;
+      this.isViewConfiguracion = false;
+
 
       switch (this.id) {
         case "Compras":   
@@ -53,9 +56,13 @@ export class SideBarComponent implements OnInit {
         case "Contabilidad":   
           this.isViewContabilidad = true;
           break;  
-
+          
         case "PuntoVenta":   
           this.isViewPuntoVenta = true;
+          break;
+
+        case "Configuracion":   
+          this.isViewConfiguracion = true;
           break;
       
         default:
@@ -65,6 +72,8 @@ export class SideBarComponent implements OnInit {
           this.isViewAlmacen = false;
           this.isViewContabilidad = false;
           this.isViewPuntoVenta = false;
+          this.isViewConfiguracion = false;
+
           break;
       }
 

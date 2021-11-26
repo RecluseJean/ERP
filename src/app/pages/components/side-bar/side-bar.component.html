@@ -199,7 +199,24 @@
 					<li><a routerLink="/tesoreria/pagos-cobranza/constancias" >Constancias de Pagos y Cobros</a></li>
 					<li><a routerLink="/tesoreria/pagos-cobranza/pagos-cobros" >Pagos y Cobros Múltiples</a></li>
 				</ul>
-            </li>            
+            </li>   
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="fa fa-files-o"></i>
+					<span class="nav-text">Configuración</span>
+				</a>
+                <ul aria-expanded="false">
+					<li><a routerLink="/tesoreria/configuracion/punto-venta" >Punto de Venta</a></li>
+					<li><a routerLink="/tesoreria/configuracion/series" >Series</a></li>
+					<li><a routerLink="/tesoreria/configuracion/bancos-empresa" >Bancos Empresas</a></li>
+					<li><a routerLink="/tesoreria/configuracion/cajas" >Cajas</a></li>
+					<li><a routerLink="/tesoreria/configuracion/cemtro-costos" >Centro de Costos</a></li>
+					<li><a routerLink="/tesoreria/configuracion/tipo-cambio" >Tipo de Cambio</a></li>
+					<li><a routerLink="/tesoreria/configuracion/periodos" >Periodos</a></li>
+					<li><a routerLink="/tesoreria/configuracion/marcas-tarjetas" >Marcas de Tarjetas</a></li>
+					<li><a routerLink="/tesoreria/configuracion/conciliaciones" >Conciliación</a></li>					
+				</ul>
+            </li>          
         </ul>
         <div class="copyright">
 			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
@@ -229,6 +246,18 @@
                     <li><a routerLink="/almacenes/movimientos/guias-entrada" >Guías de Entrada</a></li>
                     <li><a routerLink="/almacenes/movimientos/guias-salida" >Guías de Salida</a></li>
                     <li><a routerLink="/almacenes/movimientos/mercaderia" >Movimientos de Mercadería</a></li>
+                </ul>
+            </li>    
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Configuración</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/almacenes/configuracion/categoria-productos" >Categoría de Productos</a></li>
+                    <li><a routerLink="/almacenes/configuracion/almacen" >Almacén</a></li>
+                    <li><a routerLink="/almacenes/configuracion/tipo-movimiento-almacen" >Tipo de Movimientos de Almacén</a></li>
+                    <li><a routerLink="/almacenes/configuracion/marcas" >Marcas</a></li>
                 </ul>
             </li>          
         </ul>
@@ -268,7 +297,22 @@
                 <ul aria-expanded="false">
                     <li><a routerLink="/contabilidad/reportes/reportes-contables" >Reportes Contables</a></li>
                 </ul>
-            </li>          
+            </li>  
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Configuración</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/contabilidad/configuracion/nivel-cuenta" >Nivel de Cuenta</a></li>
+                    <li><a routerLink="/contabilidad/configuracion/rubro-contable" >Rubro Contable</a></li>
+                    <li><a routerLink="/contabilidad/configuracion/tipo-cuenta-bancaria" >Tipo de Cuenta Bancaria</a></li>
+                    <li><a routerLink="/contabilidad/configuracion/tipo-opracion" >Tipo de Operación</a></li>
+                    <li><a routerLink="/contabilidad/configuracion/tipo-analisis" >Tipo de Análisis</a></li>
+                    <li><a routerLink="/contabilidad/configuracion/tipo-cuentas" >Tipo de Cuentas</a></li>
+                    <li><a routerLink="/contabilidad/configuracion/pais-cuenta-equivalente" >País Cuenta Equivalente</a></li>
+                </ul>
+            </li>        
         </ul>
         <div class="copyright">
 			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
@@ -294,6 +338,67 @@
 		</div>
     </div>
         
+    <!--Configuracion-->
+    <div *ngIf="this.isViewConfiguracion" class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Planilla</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/configuracion/planilla/areas" >Áreas</a></li>
+                    <li><a routerLink="/configuracion/planilla/cargos" >Cargos</a></li>
+                    <li><a routerLink="/configuracion/planilla/empleados" >Empleados</a></li>
+                </ul>
+            </li>      
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Administrar ERP</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/configuracion/administrar-erp/modulos" >Módulos</a></li>
+                    <li><a routerLink="/configuracion/administrar-erp/paginas" >Páginas</a></li>
+                    <li><a routerLink="/configuracion/administrar-erp/agrupadores" >Agrupadores</a></li>
+                    <li><a routerLink="/configuracion/administrar-erp/planes" >Planes</a></li>
+                    <li><a routerLink="/configuracion/administrar-erp/cuentas" >Cuentas</a></li>
+                    <li><a routerLink="/configuracion/administrar-erp/tareas" >Tareas</a></li>
+                </ul>
+            </li>  
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Correos</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/configuracion/correos/cuentas-correos" >Cuentas de Correo</a></li>
+                    <li><a routerLink="/configuracion/correos/plantillas-correo" >Plantillas de Correo</a></li>
+                </ul>
+            </li>    
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-files-o"></i>
+                    <span class="nav-text">Configuración</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a routerLink="/configuracion/configuracion/usuarios" >Usuarios</a></li>
+                    <li><a routerLink="/configuracion/configuracion/bancos" >Bancos</a></li>
+                    <li><a routerLink="/configuracion/configuracion/perfiles" >Perfiles</a></li>
+                    <li><a routerLink="/configuracion/configuracion/tipo-moneda" >Tipo de Moneda</a></li>
+                    <li><a routerLink="/configuracion/configuracion/condiciones-pago" >Condiciones de Pago</a></li>
+                    <li><a routerLink="/configuracion/configuracion/parametros" >Parametros</a></li>
+                    <li><a routerLink="/configuracion/configuracion/empresas" >Empresas</a></li>
+                    <li><a routerLink="/configuracion/configuracion/almacen" >Almacén</a></li>
+                    <li><a routerLink="/configuracion/configuracion/locales" >Locales</a></li>
+                    <li><a routerLink="/configuracion/configuracion/proyecto" >Proyecto</a></li>
+                </ul>
+            </li>               
+        </ul>
+        <div class="copyright">
+			<p><strong>Planillas, hecho por Partnertech</strong> © 2021 Todos los derechos reservados</p>
+		</div>
+    </div>
 		
 </div>
 

@@ -17,6 +17,17 @@ import { TareasComponent } from './administrar-erp/tareas/tareas.component';
 import { CuentasCorreosComponent } from './correos/cuentas-correos/cuentas-correos.component';
 import { PlantillaCorreosComponent } from './correos/plantilla-correos/plantilla-correos.component';
 
+import { UsuariosCfComponent } from './configuracion/usuarios-cf/usuarios-cf.component';
+import { BancosCfComponent } from './configuracion/bancos-cf/bancos-cf.component';
+import { PerfilesCfComponent } from './configuracion/perfiles-cf/perfiles-cf.component';
+import { TipoMonedaCfComponent } from './configuracion/tipo-moneda-cf/tipo-moneda-cf.component';
+import { CondicionesPagoCfComponent } from './configuracion/condiciones-pago-cf/condiciones-pago-cf.component';
+import { ParametrosCfComponent } from './configuracion/parametros-cf/parametros-cf.component';
+import { EmpresasCfComponent } from './configuracion/empresas-cf/empresas-cf.component';
+import { AlmacenCfComponent } from './configuracion/almacen-cf/almacen-cf.component';
+import { LocalesCfComponent } from './configuracion/locales-cf/locales-cf.component';
+import { ProyectosCfComponent } from './configuracion/proyectos-cf/proyectos-cf.component';
+
 const routesDash : Routes = [
   {
     path: 'configuracion', component: ConfiguracionComponent,
@@ -26,6 +37,7 @@ const routesDash : Routes = [
       { path: 'planilla', redirectTo: 'planilla/areas', pathMatch: 'full' },  
       { path: 'administrar-erp', redirectTo: 'administrar-erp/modulos', pathMatch: 'full' },    
       { path: 'correos', redirectTo: 'correos/cuentas-correos', pathMatch: 'full' },    
+      { path: 'configuracion', redirectTo: 'configuracion/usuarios', pathMatch: 'full' },    
  
       { path: 'planilla/areas', component: AreasComponent},       
       { path: 'planilla/cargos', component: CargosComponent},       
@@ -40,6 +52,17 @@ const routesDash : Routes = [
 
       { path: 'correos/cuentas-correos', component: CuentasCorreosComponent},  
       { path: 'correos/plantillas-correo', component: PlantillaCorreosComponent},  
+
+      { path: 'configuracion/usuarios', component: UsuariosCfComponent},       
+      { path: 'configuracion/bancos', component: BancosCfComponent},       
+      { path: 'configuracion/perfiles', component: PerfilesCfComponent},       
+      { path: 'configuracion/tipo-moneda', component: TipoMonedaCfComponent},       
+      { path: 'configuracion/condiciones-pago', component: CondicionesPagoCfComponent},       
+      { path: 'configuracion/parametros', component: ParametrosCfComponent},       
+      { path: 'configuracion/empresas', component: EmpresasCfComponent},       
+      { path: 'configuracion/almacen', component: AlmacenCfComponent},       
+      { path: 'configuracion/locales', component: LocalesCfComponent},       
+      { path: 'configuracion/proyecto', component: ProyectosCfComponent},       
 
 
     ]

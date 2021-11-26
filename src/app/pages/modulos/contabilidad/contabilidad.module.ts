@@ -13,6 +13,14 @@ import { EmpleadosComponent } from './planilla/empleados/empleados.component';
 
 import { ReportesContablesComponent } from './reportes/reportes-contables/reportes-contables.component';
 
+import { NivelCuentaCnComponent } from './configuracion/nivel-cuenta-cn/nivel-cuenta-cn.component';
+import { RubroContableCnComponent } from './configuracion/rubro-contable-cn/rubro-contable-cn.component';
+import { TipoCuentaBancariaCnComponent } from './configuracion/tipo-cuenta-bancaria-cn/tipo-cuenta-bancaria-cn.component';
+import { TipoOperacionCnComponent } from './configuracion/tipo-operacion-cn/tipo-operacion-cn.component';
+import { TipoAnalisisCnComponent } from './configuracion/tipo-analisis-cn/tipo-analisis-cn.component';
+import { TipoCuentasCnComponent } from './configuracion/tipo-cuentas-cn/tipo-cuentas-cn.component';
+import { PaisCuentaEquivalenteCnComponent } from './configuracion/pais-cuenta-equivalente-cn/pais-cuenta-equivalente-cn.component';
+
 
 
 @NgModule({
@@ -25,7 +33,15 @@ import { ReportesContablesComponent } from './reportes/reportes-contables/report
 
     EmpleadosComponent,
 
-    ReportesContablesComponent
+    ReportesContablesComponent,
+    
+     NivelCuentaCnComponent,
+     RubroContableCnComponent,
+     TipoCuentaBancariaCnComponent,
+     TipoOperacionCnComponent,
+     TipoAnalisisCnComponent,
+     TipoCuentasCnComponent,
+     PaisCuentaEquivalenteCnComponent
   ],
   imports: [
     CommonModule,

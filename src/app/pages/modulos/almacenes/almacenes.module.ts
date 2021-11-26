@@ -13,6 +13,11 @@ import { GuiaEntradaComponent } from './movimientos/guia-entrada/guia-entrada.co
 import { GuiaSalidaComponent } from './movimientos/guia-salida/guia-salida.component';
 import { MovimientoMercaderiaComponent } from './movimientos/movimiento-mercaderia/movimiento-mercaderia.component';
 
+import { CategoriaProductosAComponent } from './configuracion/categoria-productos-a/categoria-productos-a.component';
+import { AlmacenAComponent } from './configuracion/almacen-a/almacen-a.component';
+import { TipoMovAlmacenAComponent } from './configuracion/tipo-mov-almacen-a/tipo-mov-almacen-a.component';
+import { MarcasAComponent } from './configuracion/marcas-a/marcas-a.component';
+
 
 
 @NgModule({
@@ -26,6 +31,10 @@ import { MovimientoMercaderiaComponent } from './movimientos/movimiento-mercader
     GuiaEntradaComponent,
     GuiaSalidaComponent,
     MovimientoMercaderiaComponent,
+    CategoriaProductosAComponent,
+    AlmacenAComponent,
+    TipoMovAlmacenAComponent,
+    MarcasAComponent,
     
   ],
   imports: [

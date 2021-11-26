@@ -7,7 +7,6 @@ import { TokenStorageService } from 'src/app/util/token-storage.service';
   styleUrls: []
 })
 export class HomeComponent implements OnInit {
-
   id: any;
 
   isViewCompras = false;
@@ -16,13 +15,14 @@ export class HomeComponent implements OnInit {
   isViewAlmacen = false;
   isViewContabilidad = false;
   isViewPuntoVenta = false;
-  
-  constructor( private token : TokenStorageService) { }
+  isViewConfiguracion = false;
+
+  constructor( private token : TokenStorageService ) { }
 
   ngOnInit(): void {
-    this.mostrarId()
+    this.mostrarId();
   }
-
+  
   mostrarId(){
     if(this.token.getSideBar()){
       this.id = this.token.getSideBar();
@@ -33,6 +33,8 @@ export class HomeComponent implements OnInit {
       this.isViewAlmacen = false;
       this.isViewContabilidad = false;
       this.isViewPuntoVenta = false;
+      this.isViewConfiguracion = false;
+
 
       switch (this.id) {
         case "Compras":   
@@ -54,9 +56,13 @@ export class HomeComponent implements OnInit {
         case "Contabilidad":   
           this.isViewContabilidad = true;
           break;  
-
+          
         case "PuntoVenta":   
           this.isViewPuntoVenta = true;
+          break;
+
+        case "Configuracion":   
+          this.isViewConfiguracion = true;
           break;
       
         default:
@@ -66,6 +72,8 @@ export class HomeComponent implements OnInit {
           this.isViewAlmacen = false;
           this.isViewContabilidad = false;
           this.isViewPuntoVenta = false;
+          this.isViewConfiguracion = false;
+
           break;
       }
 
@@ -73,6 +81,6 @@ export class HomeComponent implements OnInit {
       this.isViewCompras = true;
     }
     
-  }   
+  }    
 
 }
