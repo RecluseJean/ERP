@@ -4,9 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComprasComponent } from './compras.component';
 
 import { PresupuestoComponent } from './documentos/presupuesto/presupuesto.component';
+import { AgregarPresupuestoComponent } from './documentos/presupuesto/agregar-presupuesto/agregar-presupuesto.component';
+import { EditarPresupuestoComponent } from './documentos/presupuesto/editar-presupuesto/editar-presupuesto.component';
 import { OrdenCompraComponent } from './documentos/orden-compra/orden-compra.component';
+import { AgregarOrdenCompraComponent } from './documentos/orden-compra/agregar-orden-compra/agregar-orden-compra.component';
+import { EditarOrdenCompraComponent } from './documentos/orden-compra/editar-orden-compra/editar-orden-compra.component';
 import { DocumentoCompraComponent } from './documentos/documento-compra/documento-compra.component';
+import { AgregarDocumentoCompraComponent } from './documentos/documento-compra/agregar-documento-compra/agregar-documento-compra.component';
+import { EditarDocumentoCompraComponent } from './documentos/documento-compra/editar-documento-compra/editar-documento-compra.component';
 import { NotasCreditoDebitoComponent } from './documentos/notas-credito-debito/notas-credito-debito.component';
+import { AgregarNotasCdComponent } from './documentos/notas-credito-debito/agregar-notas-cd/agregar-notas-cd.component';
+import { EditarNotasCdComponent } from './documentos/notas-credito-debito/editar-notas-cd/editar-notas-cd.component';
 
 import { ProductoComponent } from './catalogos/producto/producto.component';
 import { ProveedoresComponent } from './catalogos/proveedores/proveedores.component';
@@ -46,9 +54,17 @@ const routesDash : Routes = [
       { path: 'configuracion', redirectTo: 'configuracion/usuarios', pathMatch: 'full' },  
  
       { path: 'documentos/presupuestos', component: PresupuestoComponent},
+      { path: 'documentos/presupuestos/agregar', component: AgregarPresupuestoComponent},
+      { path: 'documentos/presupuestos/editar', component: EditarPresupuestoComponent},
       { path: 'documentos/orden-compra', component: OrdenCompraComponent},
+      { path: 'documentos/orden-compra/agregar', component: AgregarOrdenCompraComponent},
+      { path: 'documentos/orden-compra/editar', component: EditarOrdenCompraComponent},
       { path: 'documentos/documentos-compra', component: DocumentoCompraComponent},
+      { path: 'documentos/documentos-compra/agregar', component: AgregarDocumentoCompraComponent},
+      { path: 'documentos/documentos-compra/editar', component: EditarDocumentoCompraComponent},
       { path: 'documentos/notas-credito-debito', component: NotasCreditoDebitoComponent},
+      { path: 'documentos/notas-credito-debito/agregar', component: AgregarNotasCdComponent},
+      { path: 'documentos/notas-credito-debito/editar', component: EditarNotasCdComponent},
 
       { path: 'catalogos/productos', component: ProductoComponent},
       { path: 'catalogos/proveedores', component: ProveedoresComponent},

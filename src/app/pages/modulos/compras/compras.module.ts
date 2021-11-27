@@ -6,9 +6,17 @@ import { ComprasRoutingModule } from './compras-routing.module';
 import { ComprasComponent } from './compras.component';
 
 import { PresupuestoComponent } from './documentos/presupuesto/presupuesto.component';
+import { AgregarPresupuestoComponent } from './documentos/presupuesto/agregar-presupuesto/agregar-presupuesto.component';
+import { EditarPresupuestoComponent } from './documentos/presupuesto/editar-presupuesto/editar-presupuesto.component';
 import { OrdenCompraComponent } from './documentos/orden-compra/orden-compra.component';
+import { AgregarOrdenCompraComponent } from './documentos/orden-compra/agregar-orden-compra/agregar-orden-compra.component';
+import { EditarOrdenCompraComponent } from './documentos/orden-compra/editar-orden-compra/editar-orden-compra.component';
 import { DocumentoCompraComponent } from './documentos/documento-compra/documento-compra.component';
+import { AgregarDocumentoCompraComponent } from './documentos/documento-compra/agregar-documento-compra/agregar-documento-compra.component';
+import { EditarDocumentoCompraComponent } from './documentos/documento-compra/editar-documento-compra/editar-documento-compra.component';
 import { NotasCreditoDebitoComponent } from './documentos/notas-credito-debito/notas-credito-debito.component';
+import { AgregarNotasCdComponent } from './documentos/notas-credito-debito/agregar-notas-cd/agregar-notas-cd.component';
+import { EditarNotasCdComponent } from './documentos/notas-credito-debito/editar-notas-cd/editar-notas-cd.component';
 
 import { ProductoComponent } from './catalogos/producto/producto.component';
 import { ProveedoresComponent } from './catalogos/proveedores/proveedores.component';
@@ -34,15 +42,22 @@ import { MarcasCComponent } from './configuracion/marcas-c/marcas-c.component';
 import { TiposConceptoCComponent } from './configuracion/tipos-concepto-c/tipos-concepto-c.component';
 import { UnidadesMedidasCComponent } from './configuracion/unidades-medidas-c/unidades-medidas-c.component';
 
-
 @NgModule({
   declarations: [
     ComprasComponent,
 
     PresupuestoComponent,
+    AgregarPresupuestoComponent,
+    EditarPresupuestoComponent,
     OrdenCompraComponent,
-    DocumentoCompraComponent,
+    AgregarOrdenCompraComponent,
+    EditarOrdenCompraComponent,
+    DocumentoCompraComponent,    
+    AgregarDocumentoCompraComponent,
+    EditarDocumentoCompraComponent,  
     NotasCreditoDebitoComponent,
+    AgregarNotasCdComponent,
+    EditarNotasCdComponent,      
 
     ProductoComponent,
     ProveedoresComponent,
@@ -67,7 +82,6 @@ import { UnidadesMedidasCComponent } from './configuracion/unidades-medidas-c/un
     MarcasCComponent,
     TiposConceptoCComponent,
     UnidadesMedidasCComponent,
-
   ],
 
   imports: [

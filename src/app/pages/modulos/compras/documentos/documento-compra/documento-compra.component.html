@@ -1,1 +1,130 @@
-<p>documento-compra works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Compras</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Documentos</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Documento Compra</a></li>
+        </ol>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <form class="col-sm-2">  
+                    <div class="form-row">
+                        <div class="col-sm-12">                           
+                            <div class="d-flex">
+                                <a class="btn btn-primary mr-1" title="Generar y descargar excel"><i class="fa fa-file-excel-o"></i></a>
+                                <a class="btn btn-secondary mr-1" title="Generar y descargar excel sunat"><i class="fa fa-file-excel-o"></i></a>
+                                <a class="btn btn-success" title="Compras gravadas y no gravadas .txt"><i class="fa fa-file-text-o"></i></a>
+                            </div>
+                        </div>                                 
+                    </div>
+                </form> 
+                <form class="col-sm-10 mt-3">  
+                    <div class="form-row">
+                        <div class="col-sm-3">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control col-sm-12" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>                       
+                                
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <select class="form-control default-select col-sm-12">
+                                    <option selected disabled>Proceso</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>   
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <select class="form-control default-select col-sm-12">
+                                    <option selected disabled>Estado</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>   
+                        <div class="col-sm-3">
+                            <a type="button" class="btn btn-info col-sm-12" routerLink="/compras/documentos/documentos-compra/agregar">Añadir <span
+                                class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                            </a> 
+                        </div>       
+                    </div>
+                </form>                    
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-responsive-sm">
+                        <thead class="thead-info">
+                            <tr>
+                                <th>Documento</th>
+                                <th>Serie-Número</th>
+                                <th>Proveedor</th>
+                                <th>Doc. Origen</th>
+                                <th>Fecha de Emisión</th>
+                                <th>Fecha de Vencimiento</th>
+                                <th>Subtotal</th>
+                                <th>Impuesto</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Boleta</td>
+                                <td>01-000000828</td>
+                                <td>Domestiko</td>
+                                <td>01-0000000402</td>
+                                <td>21-01-2021</td>
+                                <td>21-01-2021</td>
+                                <td>S/.11,660.00</td>
+                                <td>S/.2,098.80</td>
+                                <td>S/.13,758.80</td> 
+                                <td>
+                                    <span class="badge light badge-success">Activo</span>
+                                    <!--
+                                    <span class="badge light badge-danger">Propuesta Enviada</span>
+                                    <span class="badge light badge-warning">Propuesta Pendiente</span>
+                                    -->                                    
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a routerLink="/compras/documentos/documentos-compra/editar" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" data-target="#eliminar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /# card -->
+    </div>
+                
+    <!-- Modal -->
+    <div class="modal fade" id="eliminar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Está seguro que desea eliminar?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

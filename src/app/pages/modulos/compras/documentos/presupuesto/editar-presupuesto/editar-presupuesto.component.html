@@ -1,0 +1,335 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Compras</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Documentos</a></li>
+            <li class="breadcrumb-item"><a routerLink="/compras/documentos/presupuestos">Presupuestos</a></li>
+            <li class="breadcrumb-item active"><a  href="javascript:void(0)">Editar Presupuestos</a></li>
+
+        </ol>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">           
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label>Serie:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>                        
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Código:</label>
+                        <input type="text" class="form-control" placeholder="Código">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Fecha de emisión:</label>
+                        <input type="date" class="form-control" placeholder="Fecha">
+                        <!--
+                        <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        -->
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Tipo:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>  
+                    </div>   
+                    <div class="form-group col-md-3">
+                        <label>Condiciones de pago:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>                        
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Fecha de vigencia:</label>
+                        <input type="date" class="form-control" placeholder="Email">
+                    </div>     
+                    <div class="form-group col-md-3">
+                        <label>Tipo moneda:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>                        
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Estado:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>                        
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Comentario:</label>
+                        <input type="text" class="form-control" placeholder="Comentario">
+                    </div> 
+                    <div class="form-group col-md-6">
+                        <label>Contacto:</label>
+                        <input type="text" class="form-control" placeholder="Contacto">
+                    </div>                                       
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Productos/Servicios a solicitar</h4>
+                <div class="">
+                    <a type="button" class="btn btn-info col-sm-12" routerLink="/dashboard/ingresos/facturador/generar-facturador">Añadir <span
+                        class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                    </a> 
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-responsive-sm">
+                        <thead class="thead-info">
+                            <tr>                                					                               
+                                <th>X</th>
+                                <th>Código</th>
+                                <th>Producto</th>
+                                <th>Días de entrega</th>
+                                <th>Centro Costo</th>
+                                <th>Cantidad</th>
+                                <th>U. Medida</th>
+                                <th>Aprob.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp mr-1"><i class="fa fa-trash"></i></a>
+                                        <a data-toggle="modal" data-target=".producto" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </td>    
+                                <td>32132132</td>                                
+                                <td>Frutas </td>
+                                <td>1</td>
+                                <td>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>  
+                                </td>
+                                <td>
+                                    1                               
+                                </td>
+                                <td>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Unidades</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>  
+                                </td>
+                                <td>
+                                    <span class="badge light badge-secondary">sol</span>                                                                      
+                                </td>                                
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Proveedores</h4>
+                <div class="input-group mb-2 diet-search">
+                    <input type="text" class="form-control" placeholder="RUC">
+                    <div class="input-group-append">
+                        <button class="btn btn-info" data-toggle="modal" data-target=".proveedores" type="button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>                     
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-responsive-sm">
+                        <thead class="thead-info">
+                            <tr>
+                                <th>Proveedor</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>                             
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>60469788 Patrick Swayze </td>                              
+                                <td>
+                                    <span class="badge light badge-secondary">Estado</span>                                                                      
+                                </td>                                
+                                <td >
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /# card -->
+    </div>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-row">  
+                        <div class="col-sm-2">
+                        </div>                                
+                        <div class="col-sm-4">
+                            <h5 class="mt-2">¿Está seguro que desea editar?</h5>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-success">Editar <span
+                                class="btn-icon-right"><i class="fa fa-save"></i></span>
+                            </button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" routerLink="/compras/documentos/presupuestos" class="btn btn-danger">Cancelar <span
+                                class="btn-icon-right"><i class="fa fa-times"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade proveedores" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">PROVEEDORES</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                        
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <h5>Seleccione un proveedor del listado</h5>
+                            </div> 
+                        </div> 
+                        <div class="col-sm-6">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>                                      
+                    </div>     
+                    <hr>   
+                    <div class="table-responsive">
+                        <table class="table table-hover table-responsive-sm">
+                            <thead class="thead-info">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Tipo</th>
+                                    <th>Nro Documento</th>
+                                    <th>Dirección facturación</th>
+                                    <th>Teléfono</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Pagoda S.A</th>
+                                    <td>Natural</td>                                
+                                    <td>65656521</td>
+                                    <td>Jr. Miraflowers 545</td> 
+                                    <td>989898989</td>                                       
+                                </tr>                           
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="modal fade producto" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">PRODUCTO/SERVICIO </h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                        
+                    <div class="form-row">
+                        <div class="col-sm-4">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <h5>Seleccione un producto del listado</h5>
+                            </div> 
+                        </div> 
+                        <div class="col-sm-4">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>                       
+                                
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <select class="form-control default-select">
+                                    <option selected disabled>Buscar Por</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>                 
+                    </div>     
+                    <hr>   
+                    <div class="table-responsive">
+                        <table class="table table-hover table-responsive-sm">
+                            <thead class="thead-info">
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Marca</th>
+                                    <th>Nombre</th>
+                                    <th>Unidad Medida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>00004</th>
+                                    <td>-</td>                                
+                                    <td>Frutas Deshidratadas</td>
+                                    <td>Unidades</td>                                        
+                                </tr>                           
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
