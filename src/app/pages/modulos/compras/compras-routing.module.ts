@@ -17,13 +17,23 @@ import { AgregarNotasCdComponent } from './documentos/notas-credito-debito/agreg
 import { EditarNotasCdComponent } from './documentos/notas-credito-debito/editar-notas-cd/editar-notas-cd.component';
 
 import { ProductoComponent } from './catalogos/producto/producto.component';
+import { AgregarProductoCatalogoComponent } from './catalogos/producto/agregar-producto-catalogo/agregar-producto-catalogo.component';
+import { EditarProductoCatalogoComponent } from './catalogos/producto/editar-producto-catalogo/editar-producto-catalogo.component';
 import { ProveedoresComponent } from './catalogos/proveedores/proveedores.component';
+import { AgregarProveedoresCatalogosComponent } from './catalogos/proveedores/agregar-proveedores-catalogos/agregar-proveedores-catalogos.component';
+import { EditarProveedoresCatalogosComponent } from './catalogos/proveedores/editar-proveedores-catalogos/editar-proveedores-catalogos.component';
 
 import { MovimientoMercaderiaComponent } from './movimientos/movimiento-mercaderia/movimiento-mercaderia.component';
+import { AgregarMovimientoMercaderiaMovimientoComponent } from './movimientos/movimiento-mercaderia/agregar-movimiento-mercaderia-movimiento/agregar-movimiento-mercaderia-movimiento.component';
+import { EditarMovimientoMercaderiaMovimientoComponent } from './movimientos/movimiento-mercaderia/editar-movimiento-mercaderia-movimiento/editar-movimiento-mercaderia-movimiento.component';
 
 import { ImpuestosHonorariosComponent } from './gestion-recibos/impuestos-honorarios/impuestos-honorarios.component';
+import { AgregarImpuestohGrComponent } from './gestion-recibos/impuestos-honorarios/agregar-impuestoh-gr/agregar-impuestoh-gr.component';
+import { EditarImpuestohGrComponent } from './gestion-recibos/impuestos-honorarios/editar-impuestoh-gr/editar-impuestoh-gr.component';
 import { TiposHonorariosComponent } from './gestion-recibos/tipos-honorarios/tipos-honorarios.component';
 import { HonorariosComponent } from './gestion-recibos/honorarios/honorarios.component';
+import { AgregarHonorarioGrComponent } from './gestion-recibos/honorarios/agregar-honorario-gr/agregar-honorario-gr.component';
+import { EditarHonorarioGrComponent } from './gestion-recibos/honorarios/editar-honorario-gr/editar-honorario-gr.component';
 import { RecibosComponent } from './gestion-recibos/recibos/recibos.component';
 
 import { OrdenCompraAprobarComponent } from './aprobaciones/orden-compra-aprobar/orden-compra-aprobar.component';
@@ -67,14 +77,24 @@ const routesDash : Routes = [
       { path: 'documentos/notas-credito-debito/editar', component: EditarNotasCdComponent},
 
       { path: 'catalogos/productos', component: ProductoComponent},
+      { path: 'catalogos/productos/agregar', component: AgregarProductoCatalogoComponent},
+      { path: 'catalogos/productos/editar', component: EditarProductoCatalogoComponent},
       { path: 'catalogos/proveedores', component: ProveedoresComponent},
+      { path: 'catalogos/proveedores/agregar', component: AgregarProveedoresCatalogosComponent},
+      { path: 'catalogos/proveedores/editar', component: EditarProveedoresCatalogosComponent},
 
       { path: 'movimientos/mercaderia', component: MovimientoMercaderiaComponent},
+      { path: 'movimientos/mercaderia/agregar', component: AgregarMovimientoMercaderiaMovimientoComponent},
+      { path: 'movimientos/mercaderia/editar', component: EditarMovimientoMercaderiaMovimientoComponent},
 
       { path: 'gestion-recibos/impuestos-honorario', component: ImpuestosHonorariosComponent},
+      { path: 'gestion-recibos/impuestos-honorario/agregar', component: AgregarImpuestohGrComponent},
+      { path: 'gestion-recibos/impuestos-honorario/editar', component: EditarImpuestohGrComponent},
       { path: 'gestion-recibos/tipos-honorario', component: TiposHonorariosComponent},
-      { path: 'gestion-recibos/recibos', component: HonorariosComponent},
-      { path: 'gestion-recibos/honorario', component: RecibosComponent},
+      { path: 'gestion-recibos/honorario', component: HonorariosComponent},
+      { path: 'gestion-recibos/honorario/agregar', component: AgregarHonorarioGrComponent},
+      { path: 'gestion-recibos/honorario/editar', component: EditarHonorarioGrComponent},
+      { path: 'gestion-recibos/recibos', component: RecibosComponent},
 
       { path: 'aprobaciones/orden-compra', component: OrdenCompraAprobarComponent},
       { path: 'aprobaciones/presupuesto', component: PresupuestoAprobarComponent},  

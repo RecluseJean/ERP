@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-orden-compra-aprobar',
   templateUrl: './orden-compra-aprobar.component.html',
-  styleUrls: ['./orden-compra-aprobar.component.css']
+  styleUrls: []
 })
 export class OrdenCompraAprobarComponent implements OnInit {
 

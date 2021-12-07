@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 //Componentes
 import { ComponentsModule } from './pages/components/components.module';
@@ -30,8 +31,8 @@ import { PuntoVentaModule } from './pages/modulos/punto-venta/punto-venta.module
   imports: [
     BrowserModule,    
     AppRoutingModule,
-
     ComponentsModule,
+    FormsModule,
 
     HomeModule,
 
@@ -46,7 +47,7 @@ import { PuntoVentaModule } from './pages/modulos/punto-venta/punto-venta.module
     AlmacenesModule,
     ContabilidadModule,
     ConfiguracionModule,
-    PuntoVentaModule
+    PuntoVentaModule,
     
   ],
   providers: [],

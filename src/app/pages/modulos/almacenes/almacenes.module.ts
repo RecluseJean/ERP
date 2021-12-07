@@ -40,7 +40,7 @@ import { MarcasAComponent } from './configuracion/marcas-a/marcas-a.component';
   imports: [
     CommonModule,
     AlmacenesRoutingModule,
-    ComponentsModule
+    ComponentsModule,
   ]
 })
 export class AlmacenesModule { }
