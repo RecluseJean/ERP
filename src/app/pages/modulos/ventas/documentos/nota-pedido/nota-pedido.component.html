@@ -1,1 +1,131 @@
-<p>nota-pedido works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Ventas</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Mantenimiento de Notas de Pedido</a></li>
+        </ol>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header"> 
+                <form class="col-sm-12 mt-3">  
+                    <div class="form-row">
+                        <div class="col-sm-3">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control col-sm-12" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>   
+                        <div class="col-sm-2 mr-auto">
+                            <div class="form-group">
+                                <a type="button" class="btn btn-info" routerLink="/ventas/documentos/nota-pedido/agregar">Añadir <span
+                                    class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                                </a>
+                            </div>
+                        </div>   
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <select class="form-control default-select col-sm-12">
+                                    <option selected disabled>Estado</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>   
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <select class="form-control default-select col-sm-12">
+                                    <option selected disabled>Todos</option>
+                                    <option>Solicitado</option>
+                                    <option>Con Anticipo</option>
+                                    <option>Guiado</option>
+                                </select>
+                            </div>
+                        </div> 
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <select class="form-control default-select col-sm-12">
+                                    <option selected disabled>Todos</option>
+                                    <option>Sin Facturar</option>
+                                    <option>Facturado</option>
+                                </select>
+                            </div>
+                        </div> 
+                         
+                    </div>
+                </form>                    
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-responsive-sm">
+                        <thead class="thead-info">
+                            <tr>
+                                <th>Código</th>
+                                <th>Serie</th>
+                                <th>Fecha de Registro</th>
+                                <th>Fecha de Vencimiento</th>
+                                <th>Cliente</th>
+                                <th>Moneda</th>
+                                <th>Subtotal</th>
+                                <th>Impuesto</th>
+                                <th>Total</th>
+                                <th>Estado</th>                                
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0000000445</td> 
+                                <td>01</td>
+                                <td>15-06-2021</td>
+                                <td>19-06-2021</td>
+                                <td>Tessy</td>
+                                <td>Soles</td>
+                                <td>S/.14,705.08</td>
+                                <td>S/.96,400.00</td>
+                                <td>S/.96,400.00</td>
+                                <td>
+                                    <div class="d-flex align-items-center"><i class="fa fa-circle text-success mr-1"></i> Activo</div>
+                                    <!--
+                                    <div class="d-flex align-items-center"><i class="fa fa-circle text-danger mr-1"></i> Cancelado</div>
+                                    <div class="d-flex align-items-center"><i class="fa fa-circle text-warning mr-1"></i> Pendiente</div>
+                                    -->
+                                </td>                               
+                                <td>
+                                    <div class="d-flex">
+                                        <a routerLink="/ventas/documentos/nota-pedido/editar" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" data-target="#eliminar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /# card -->
+    </div>
+
+    <!-- Confirmación -->
+    <div class="modal fade" id="eliminar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Está seguro que desea eliminar?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+                                   
+
+</div>  
