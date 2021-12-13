@@ -1,0 +1,329 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Compras</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Catálogos</a></li>
+            <li class="breadcrumb-item"><a routerLink="/ventas/catalogos/productos">Productos</a></li>
+            <li class="breadcrumb-item active"><a  href="javascript:void(0)">Editar</a></li>
+        </ol>
+    </div>
+
+    <div class="col-xl-12">
+        <div class="card">            
+            <div class="card-body">                
+                <!-- Nav tabs -->
+                <div class="default-tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#info">Información General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#inventario">Inventario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#foto">Foto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#detcon">Detalles Contabilidad</a>
+                        </li>
+                        <li class="nav-item mr-auto">
+                            <a class="nav-link" data-toggle="tab" href="#anticipo">Presentación</a>
+                        </li>                        
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="info" role="tabpanel">                                                         
+                            <div class="form-row pt-4">
+                                <div class="form-group col-md-4">
+                                    <label>Código:</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Ámbito:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Tipo Concepto:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Marca:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>                  
+                                <div class="form-group col-md-4">
+                                    <label>Nombre:</label>
+                                    <input type="text" class="form-control" placeholder="Serie">
+                                </div>  
+                                <div class="form-group col-md-4">
+                                    <label>Estado:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Descripción:</label>
+                                    <textarea class="form-control"></textarea>                        
+                                </div>
+                                <div class="form-group col-sm-4 mt-2">
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="igv" required>
+                                        <label class="custom-control-label" for="igv">Precio Incluye IGV</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-4 mt-2">
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="pventa" required>
+                                        <label class="custom-control-label" for="pventa">Mostrar Punto Venta</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-4 mt-2">
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="vss" required>
+                                        <label class="custom-control-label" for="vss">Vender sin Stock</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Precio Compra:</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>  
+                                <div class="form-group col-md-4">
+                                    <label>Precio Venta:</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>  
+                                <div class="form-group col-md-4">
+                                    <label>Stock Mínimo:</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>  
+                                <div class="form-group col-md-4">
+                                    <label>Stock Máximo:</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>  
+                                <div class="form-group col-md-4">
+                                    <label>Clase:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Grupo:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Sub Grupo:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Cod. SUNAT:</label>
+                                    <input type="text" class="form-control" placeholder="Serie">
+                                </div>  
+                                <div class="form-group col-md-4">
+                                    <label>Tipo Afecto:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="alert alert-info text-center" role="alert">
+                                        Info! Escribir las 3 primeras letras del producto para empezar a buscar.
+                                    </div>
+                                </div>                                                                     
+                            </div>  
+                        </div>
+
+                        <div class="tab-pane fade" id="inventario">
+                            <div class="form-row pt-4">                                
+                                <div class="col-sm-12">
+                                   
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="tab-pane fade" id="foto">
+                            <div class="form-row pt-4">       
+                                <div class="form-group col-md-12">
+                                    <label class="mr-2">Foto Producto:</label>
+                                    <button type="button" class="btn light btn-primary" style="overflow: hidden; position: relative;">
+                                        <input (change)="detectFiles($event)" class="fileInput" type="file" name="file1" accept="image/*"
+                                        style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                        <span class="btn-icon-left text-primary">
+                                            <i class="fa fa-upload color-info"></i>
+                                        </span>Subir foto
+                                    </button>                                
+                                </div>  
+                                <div class="form-group col-md-12">
+                                    <img *ngFor="let url of urls" [src]="url" class="rounded mb-3" width="100%">
+                                </div>
+                            </div>                              
+                        </div>
+                        
+                        <div class="tab-pane fade" id="detcon">
+                            <div class="form-row pt-4">
+                                <div class="form-group col-sm-3 mt-2">
+                                    <label>Detracción:</label>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="det" required>
+                                        <label class="custom-control-label" for="det">Afecto</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-3 mt-2">
+                                    <label>Retención:</label>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="ret" required>
+                                        <label class="custom-control-label" for="ret">Afecto</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-3 mt-2">
+                                    <label>Percepción:</label>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="per" required>
+                                        <label class="custom-control-label" for="per">Afecto</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-3 mt-2">
+                                    <label>Inventario:</label>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="inv" required>
+                                        <label class="custom-control-label" for="inv">Almacenable</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label>Unidad de medida:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div>                  
+                                <div class="form-group col-md-5">
+                                    <label>Cantidad de Unidades:</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div> 
+                                <div class="form-group col-md-2">     
+                                    <label style="visibility: hidden;">productos</label>
+                                    <button type="button" class="btn btn-info">
+                                        Añadir <span class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                                    </button>                                                                     
+                                </div> 
+                                
+                                <div class="form-group col-sm-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-responsive-sm mt-2 ">
+                                            <thead class="thead-info">
+                                                <tr>                                					                               
+                                                    <th>#</th>
+                                                    <th>Cuenta</th>
+                                                    <th>Cantidad</th>                                                                                             
+                                                    <th>Eliminar</th>                                                                      
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>   			
+                                                    <td>1</td>                                
+                                                    <td>Millares</td>  
+                                                    <td>202</td>  
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <a class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>                                                                           
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label>Cuenta Compra:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div> 
+                                <div class="form-group col-md-4">
+                                    <label>Cuenta Venta:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div> 
+                                <div class="form-group col-md-4">
+                                    <label>Cuenta Impuesto:</label>
+                                    <select class="form-control default-select">
+                                        <option selected disabled>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>                        
+                                </div> 
+
+                            </div>                                
+                        </div>
+                        <div class="tab-pane fade" id="anticipo">
+                            <div class="pt-4">
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-row">  
+                        <div class="col-sm-2">
+                        </div>                                
+                        <div class="col-sm-4">
+                            <h5 class="mt-2">¿Está seguro que desea editar?</h5>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-success">Editar <span
+                                class="btn-icon-right"><i class="fa fa-save"></i></span>
+                            </button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" routerLink="/ventas/catalogos/productos" class="btn btn-danger">Cancelar <span
+                                class="btn-icon-right"><i class="fa fa-times"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div>    
+</div>
+
+

@@ -10,9 +10,15 @@ import { NotaPedidoComponent } from './documentos/nota-pedido/nota-pedido.compon
 import { NotaPedidoAgregarVComponent } from './documentos/nota-pedido/nota-pedido-agregar-v/nota-pedido-agregar-v.component';
 import { NotaPedidoEditarVComponent } from './documentos/nota-pedido/nota-pedido-editar-v/nota-pedido-editar-v.component';
 import { DocumentosVentasComponent } from './documentos/documentos-ventas/documentos-ventas.component';
+import { AgregarDocumentoDvComponent } from './documentos/documentos-ventas/agregar-documento-dv/agregar-documento-dv.component';
+import { EditarDocumentoDvComponent } from './documentos/documentos-ventas/editar-documento-dv/editar-documento-dv.component';
 
 import { ClientesComponent } from './catalogos/clientes/clientes.component';
+import { AgregarClientesCvComponent } from './catalogos/clientes/agregar-clientes-cv/agregar-clientes-cv.component';
+import { EditarClientesCvComponent } from './catalogos/clientes/editar-clientes-cv/editar-clientes-cv.component';
 import { ProductosComponent } from './catalogos/productos/productos.component';
+import { AgregarProductosCvComponent } from './catalogos/productos/agregar-productos-cv/agregar-productos-cv.component';
+import { EditarProductosCvComponent } from './catalogos/productos/editar-productos-cv/editar-productos-cv.component';
 
 
 
@@ -33,9 +39,15 @@ const routesDash : Routes = [
       { path: 'documentos/nota-pedido/agregar', component: NotaPedidoAgregarVComponent},
       { path: 'documentos/nota-pedido/editar', component: NotaPedidoEditarVComponent},
       { path: 'documentos/documento-venta', component: DocumentosVentasComponent},
+      { path: 'documentos/documento-venta/agregar', component: AgregarDocumentoDvComponent},
+      { path: 'documentos/documento-venta/editar', component: EditarDocumentoDvComponent},
 
       { path: 'catalogos/clientes', component: ClientesComponent},
+      { path: 'catalogos/clientes/agregar', component: AgregarClientesCvComponent},
+      { path: 'catalogos/clientes/editar', component: EditarClientesCvComponent},
       { path: 'catalogos/productos', component: ProductosComponent},       
+      { path: 'catalogos/productos/agregar', component: AgregarProductosCvComponent},       
+      { path: 'catalogos/productos/editar', component: EditarProductosCvComponent},       
             
     ]
   }
