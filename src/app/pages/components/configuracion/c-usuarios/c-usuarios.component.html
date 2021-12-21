@@ -1,1 +1,335 @@
-<p>c-usuarios works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Planilla</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Empleados</a></li>
+        </ol>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">               
+                <div class="col-sm-12 mt-3">  
+                    <div class="form-row">    
+                        <div class="col-sm-2">                           
+                            <a type="button" class="btn btn-secondary" data-toggle="modal" data-target=".agregarempleado">Agregar <span
+                                class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                            </a>   
+                        </div>                       
+                        <div class="col-sm-6">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control col-sm-12" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>              
+                    </div>
+                </div>                    
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-responsive-sm">                        
+                        <thead class="thead-info">
+                            <tr>   
+                                <th>Nro. Documento</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Estado</th>
+                                <th>Tipo</th>                             
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>75626780</td>
+                                <td>Monteza</td>
+                                <td>Saavedra</td>
+                                <td>Jose David</td>
+                                <td>josedavid171999@gmail.com</td>
+                                <td>
+                                    <span class="badge light badge-success">Activo</span>
+                                    <!--
+                                    <span class="badge light badge-danger">Propuesta Enviada</span>
+                                    <span class="badge light badge-warning">Propuesta Pendiente</span>
+                                    -->                                    
+                                </td>
+                                <td>Administrador</td>                            
+                                <td>
+                                    <div class="d-flex">
+                                        <a data-toggle="modal" data-target="#bloquear" class="btn btn-danger shadow btn-xs sharp mr-1"><i class="fa fa-ban"></i></a>
+                                        <a data-toggle="modal" data-target=".editarempleado" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" data-target="#eliminar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /# card -->
+    </div>
+                
+    <!-- Modal Eliminar -->
+    <div class="modal fade" id="eliminar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bloquear</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Está seguro que desea bloquear?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Bloquear-->
+     <!-- Modal -->
+     <div class="modal fade" id="bloquear">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Está seguro que desea eliminar?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal AGREGARRRRR-->
+    
+    <div class="modal fade agregarempleado" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Empleado</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-tab-1">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home1">Datos Principales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile1">Perfil Asociado</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="home1" role="tabpanel">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label>Tipo Documento Identidad:</label>
+                                            <select class="form-control default-select">
+                                                <option>DNI</option>
+                                                <option>Pasaporte</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Nro Documento:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Tipo empleado:</label>
+                                            <select class="form-control default-select">
+                                                <option>Vendedor</option>
+                                                <option>Administrador</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Apellido paterno:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Apellido materno:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Nombres:</label>
+                                            <input type="e" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Email:</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Estado:</label>
+                                            <select class="form-control default-select">
+                                                <option>Activo</option>
+                                                <option>Inactivo</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Área:</label>
+                                            <select class="form-control default-select">
+                                                <option>Área 1</option>
+                                                <option>Área 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Cargo:</label>
+                                            <select class="form-control default-select">
+                                                <option>Cargo 1</option>
+                                                <option>Cargo 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Local:</label>
+                                            <select class="form-control default-select">
+                                                <option>Villa María</option>
+                                                <option>Miraflowers</option>
+                                            </select>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile1">
+                                <div class="pt-4">
+                                    <div class="form-group col-md-12">
+                                        <label>Perfil:</label>
+                                        <select class="form-control default-select">
+                                            <option>Perfil 1</option>
+                                            <option>Perfil 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal EDITARRRRR-->
+    <div class="modal fade editarempleado" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Empleado</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-tab-1">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home12">Datos Principales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile12">Perfil Asociado</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="home12" role="tabpanel">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label>Tipo Documento Identidad:</label>
+                                            <select class="form-control default-select">
+                                                <option>DNI</option>
+                                                <option>Pasaporte</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Nro Documento:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Tipo empleado:</label>
+                                            <select class="form-control default-select">
+                                                <option>Vendedor</option>
+                                                <option>Administrador</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Apellido paterno:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Apellido materno:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Nombres:</label>
+                                            <input type="e" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Email:</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Estado:</label>
+                                            <select class="form-control default-select">
+                                                <option>Activo</option>
+                                                <option>Inactivo</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Área:</label>
+                                            <select class="form-control default-select">
+                                                <option>Área 1</option>
+                                                <option>Área 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Cargo:</label>
+                                            <select class="form-control default-select">
+                                                <option>Cargo 1</option>
+                                                <option>Cargo 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Local:</label>
+                                            <select class="form-control default-select">
+                                                <option>Villa María</option>
+                                                <option>Miraflowers</option>
+                                            </select>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile12">
+                                <div class="pt-4">
+                                    <div class="form-group col-md-12">
+                                        <label>Perfil:</label>
+                                        <select class="form-control default-select">
+                                            <option>Perfil 1</option>
+                                            <option>Perfil 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success light">Reiniciar Password</button>
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,1 +1,592 @@
-<p>c-empresas works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Planilla</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Empresas</a></li>
+        </ol>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">               
+                <div class="col-sm-12 mt-3">  
+                    <div class="form-row">    
+                        <div class="col-sm-2">                           
+                            <a type="button" class="btn btn-secondary" data-toggle="modal" data-target=".agregarempre">Agregar <span
+                                class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                            </a>   
+                        </div>                       
+                        <div class="col-sm-6">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control col-sm-12" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>              
+                    </div>
+                </div>                    
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-responsive-sm">                        
+                        <thead class="thead-info">
+                            <tr>  
+                                <th>Ruc</th>
+                                <th>Razon Social</th>
+                                <th>Dirección Comercial</th>
+                                <th>Estado</th>
+                                <th>Fecha Registro</th>
+                                <th>Teléfono</th>
+                                <th>Email</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10722042269</td>
+                                <td>CASTILLA HEREÑA DAIANA MARIA</td>
+                                <td></td>
+                                <td>
+                                    <span class="badge light badge-success">Activo</span>
+                                    <!--
+                                    <span class="badge light badge-danger">Propuesta Enviada</span>
+                                    <span class="badge light badge-warning">Propuesta Pendiente</span>
+                                    -->                                    
+                                </td>
+                                <td>17-08-2020</td>
+                                <td></td>
+                                <td>dcastilla@partnertech.pe</td>                                                
+                                <td>
+                                    <div class="d-flex">
+                                        <a data-toggle="modal" data-target=".editarempre" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" data-target="#eliminar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /# card -->
+    </div>
+                
+    <!-- Modal Eliminar -->
+    <div class="modal fade" id="eliminar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eliminar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Está seguro que desea eliminar?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal AGREGARRRRR-->
+    
+    <div class="modal fade agregarempre" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nueva Empresa</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-tab-1">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home12">Datos de la Empresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile12">Datos Adicionales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile22">Logo de la Empresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile32">Datos Facturación</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="home12" role="tabpanel">
+                                <div class="pt-4">
+                                    <div class="form-row">                                        
+                                        <div class="form-group col-md-4">
+                                            <label>RUC:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-8">
+                                            <label>Razon Social:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Nombre Comercial:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Celular:</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Anexo:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Dirección Comercial:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Email:</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Sitio Web:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Teléfono:</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Estado:</label>
+                                            <select class="form-control default-select">
+                                                <option>Activo</option>
+                                                <option>Inactivo</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Regimen Empresa:</label>
+                                            <select class="form-control default-select">
+                                                <option>Regimen 1</option>
+                                                <option>Regimen 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Actividad Comercial:</label>
+                                            <select class="form-control default-select">
+                                                <option>Actividad 1</option>
+                                                <option>Actividad 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Tipo Moneda:</label>
+                                            <select class="form-control default-select">
+                                                <option>Soles</option>
+                                                <option>Euros</option>
+                                            </select>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile12">
+                                <div class="pt-4">                                    
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile22">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4 mt-5">
+                                            <label class="mr-2 mt-2">Logo de la empresa</label>
+                                            <button type="button" class="btn light btn-primary" style="overflow: hidden; position: relative;">
+                                                <input (change)="detectFiles($event)" class="fileInput" type="file" name="file1" accept="image/*"
+                                                style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                                <span class="btn-icon-left text-primary">
+                                                    <i class="fa fa-upload color-info"></i>
+                                                </span>Subir foto
+                                            </button>                                
+                                        </div>  
+                                        <div class="form-group col-md-8">
+                                            <img *ngFor="let url of urls" [src]="url" class="rounded mb-3" width="100%">
+                                        </div>
+                                    </div>           
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile32">
+                                <div class="pt-4">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-12">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-danger">
+                                                <input type="checkbox" class="custom-control-input" checked id="customCheckBox5" required>
+                                                <label class="custom-control-label" for="customCheckBox5">Habilitar Facturación Electrónica</label>
+                                            </div>
+                                        </div>    
+                                        <div class="form-group col-md-12">
+                                            <label>Seleccionar Tipo de Facturación:</label>
+                                            <select class="form-control default-select">
+                                                <option>Facturación PSE</option>
+                                                <option>Facturación PROPIA</option>
+                                            </select>
+                                        </div>      
+                                        <div class="form-group col-md-6">
+                                            <label>Usuario Sol:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Pass Sol:</label>
+                                            <input type="number" class="form-control">
+                                        </div> 
+                                        <!--Solo si es FACTURACION PROPIA-->
+                                        <div class="form-group col-md-6">
+                                            <label>Pass Firma:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Subir Firma:</label>  
+                                            <div class="form-group">
+                                                <button type="button" class="btn light btn-primary" style="overflow: hidden; position: relative;">
+                                                    <input (change)="detectFiles($event)" class="fileInput" type="file" name="file1" 
+                                                    style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                                    <span class="btn-icon-left text-primary">
+                                                        <i class="fa fa-upload color-info"></i>
+                                                    </span>Firma
+                                                </button>   
+                                            </div>                                             
+                                        </div>
+                                        <!--Fin-->
+                                        <div class="form-group col-md-4">
+                                            <label>Departamento:</label>
+                                            <select class="form-control default-select">
+                                                <option>Lima</option>
+                                                <option>Arequipa</option>
+                                            </select>
+                                        </div>    
+                                        <div class="form-group col-md-4">
+                                            <label>Provincia:</label>
+                                            <select class="form-control default-select">
+                                                <option>Lima</option>
+                                                <option>Arequipa</option>
+                                            </select>
+                                        </div>  
+                                        <div class="form-group col-md-4">
+                                            <label>Distrito:</label>
+                                            <select class="form-control default-select">
+                                                <option>Comas</option>
+                                                <option>Los Olivos</option>
+                                            </select>
+                                        </div>  
+
+                                        <div class="form-group col-md-7">
+                                            <div class="alert alert-warning alert-dismissible fade show">   
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                             
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <h5 class="mt-1 mb-1" style="font-size: 11px;">Después de activar la facturación electrónica es necesario:</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-warning alert-dismissible fade show">  
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                              
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="mb-0" style="font-size: 11px;">-Registrar el código sunat de sus productos en el módulo de ventas</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-warning alert-dismissible fade show">  
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                              
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="mb-0" style="font-size: 11px;">-Tener en cuenta que los clientes deben tener registrados los campos departamento,provincia y distrito</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-warning alert-dismissible fade show">   
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                             
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="mb-0" style="font-size: 11px;">- En la pagina de series del módulo tesoreria, actualizar los registros para factura y boleta, completar el campo serie facturacion</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-5">                                         
+                                            <div  style="border-radius: 15px; border-style: solid; border-color: #DBDBDB;">
+                                                <div class="pt-2 pl-2 pr-2 pb-2">
+                                                    <label >Seleccionar Ambiente de Facturación:</label>
+                                                    <select class="form-control default-select">
+                                                        <option>Pruebas</option>
+                                                        <option>Producción</option>
+                                                    </select>
+                                                </div>                                                
+                                            </div>                                            
+                                        </div>  
+
+                                    </div>                       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal EDITARRRR-->
+
+    <div class="modal fade editarempre" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar Empresa</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-tab-1">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home1">Datos de la Empresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile1">Datos Adicionales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile2">Logo de la Empresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile3">Datos Facturación</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="home1" role="tabpanel">
+                                <div class="pt-4">
+                                    <div class="form-row">                                        
+                                        <div class="form-group col-md-4">
+                                            <label>RUC:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-8">
+                                            <label>Razon Social:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Nombre Comercial:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Celular:</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Anexo:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Dirección Comercial:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Email:</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Sitio Web:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Teléfono:</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>Estado:</label>
+                                            <select class="form-control default-select">
+                                                <option>Activo</option>
+                                                <option>Inactivo</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Regimen Empresa:</label>
+                                            <select class="form-control default-select">
+                                                <option>Regimen 1</option>
+                                                <option>Regimen 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Actividad Comercial:</label>
+                                            <select class="form-control default-select">
+                                                <option>Actividad 1</option>
+                                                <option>Actividad 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Tipo Moneda:</label>
+                                            <select class="form-control default-select">
+                                                <option>Soles</option>
+                                                <option>Euros</option>
+                                            </select>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile1">
+                                <div class="pt-4">                                    
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile2">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4 mt-5">
+                                            <label class="mr-2 mt-2">Logo de la empresa</label>
+                                            <button type="button" class="btn light btn-primary" style="overflow: hidden; position: relative;">
+                                                <input (change)="detectFiles($event)" class="fileInput" type="file" name="file1" accept="image/*"
+                                                style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                                <span class="btn-icon-left text-primary">
+                                                    <i class="fa fa-upload color-info"></i>
+                                                </span>Subir foto
+                                            </button>                                
+                                        </div>  
+                                        <div class="form-group col-md-8">
+                                            <img *ngFor="let url of urls" [src]="url" class="rounded mb-3" width="100%">
+                                        </div>
+                                    </div>           
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile3">
+                                <div class="pt-4">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-12">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-danger">
+                                                <input type="checkbox" class="custom-control-input" checked id="customCheckBox5" required>
+                                                <label class="custom-control-label" for="customCheckBox5">Habilitar Facturación Electrónica</label>
+                                            </div>
+                                        </div>    
+                                        <div class="form-group col-md-12">
+                                            <label>Seleccionar Tipo de Facturación:</label>
+                                            <select class="form-control default-select">
+                                                <option>Facturación PSE</option>
+                                                <option>Facturación PROPIA</option>
+                                            </select>
+                                        </div>      
+                                        <div class="form-group col-md-6">
+                                            <label>Usuario Sol:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Pass Sol:</label>
+                                            <input type="number" class="form-control">
+                                        </div> 
+                                        <!--Solo si es FACTURACION PROPIA-->
+                                        <div class="form-group col-md-6">
+                                            <label>Pass Firma:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Subir Firma:</label>  
+                                            <div class="form-group">
+                                                <button type="button" class="btn light btn-primary" style="overflow: hidden; position: relative;">
+                                                    <input (change)="detectFiles($event)" class="fileInput" type="file" name="file1" 
+                                                    style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                                    <span class="btn-icon-left text-primary">
+                                                        <i class="fa fa-upload color-info"></i>
+                                                    </span>Firma
+                                                </button>   
+                                            </div>                                             
+                                        </div>
+                                        <!--Fin-->
+                                        <div class="form-group col-md-4">
+                                            <label>Departamento:</label>
+                                            <select class="form-control default-select">
+                                                <option>Lima</option>
+                                                <option>Arequipa</option>
+                                            </select>
+                                        </div>    
+                                        <div class="form-group col-md-4">
+                                            <label>Provincia:</label>
+                                            <select class="form-control default-select">
+                                                <option>Lima</option>
+                                                <option>Arequipa</option>
+                                            </select>
+                                        </div>  
+                                        <div class="form-group col-md-4">
+                                            <label>Distrito:</label>
+                                            <select class="form-control default-select">
+                                                <option>Comas</option>
+                                                <option>Los Olivos</option>
+                                            </select>
+                                        </div>  
+
+                                        <div class="form-group col-md-7">
+                                            <div class="alert alert-warning alert-dismissible fade show">   
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                             
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <h5 class="mt-1 mb-1" style="font-size: 11px;">Después de activar la facturación electrónica es necesario:</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-warning alert-dismissible fade show">  
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                              
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="mb-0" style="font-size: 11px;">-Registrar el código sunat de sus productos en el módulo de ventas</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-warning alert-dismissible fade show">  
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                              
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="mb-0" style="font-size: 11px;">-Tener en cuenta que los clientes deben tener registrados los campos departamento,provincia y distrito</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-warning alert-dismissible fade show">   
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                                </button>                                             
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="mb-0" style="font-size: 11px;">- En la pagina de series del módulo tesoreria, actualizar los registros para factura y boleta, completar el campo serie facturacion</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-5">                                         
+                                            <div  style="border-radius: 15px; border-style: solid; border-color: #DBDBDB;">
+                                                <div class="pt-2 pl-2 pr-2 pb-2">
+                                                    <label >Seleccionar Ambiente de Facturación:</label>
+                                                    <select class="form-control default-select">
+                                                        <option>Pruebas</option>
+                                                        <option>Producción</option>
+                                                    </select>
+                                                </div>                                                
+                                            </div>                                            
+                                        </div>  
+
+                                    </div>                       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

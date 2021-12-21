@@ -1,1 +1,161 @@
-<p>c-tipo-cuenta-bancaria works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Planilla</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Cuentas Bancarias Contables</a></li>
+        </ol>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">               
+                <div class="col-sm-12 mt-3">  
+                    <div class="form-row">    
+                        <div class="col-sm-2">                           
+                            <a type="button" class="btn btn-secondary" data-toggle="modal" data-target=".agregartcb">Agregar <span
+                                class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                            </a>   
+                        </div>                       
+                        <div class="col-sm-6">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control col-sm-12" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>      
+                        <div class="col-sm-3">
+                            <div class="form-group mb-0 mt-3">
+                                <label class="radio-inline mr-3"><input type="radio" name="optradio"> Todos</label>
+                                <label class="radio-inline mr-3"><input type="radio" name="optradio"> Activos</label>
+                                <label class="radio-inline mr-3"><input type="radio" name="optradio"> Inactivos</label>
+                            </div>
+                        </div>           
+                    </div>
+                </div>                    
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-responsive-sm">                        
+                        <thead class="thead-info">
+                            <tr>
+                                <th>Nro.</th>
+                                <th>Nombre</th>
+                                <th>Fecha Registro</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cuenta de credito</td>
+                                <td>07-05-2017</td>
+                                <td>
+                                    <span class="badge light badge-success">Activo</span>
+                                    <!--
+                                    <span class="badge light badge-danger">Propuesta Enviada</span>
+                                    <span class="badge light badge-warning">Propuesta Pendiente</span>
+                                    -->                                    
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a data-toggle="modal" data-target=".editartcb" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" data-target="#eliminar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /# card -->
+    </div>
+                
+    <!-- Modal Eliminar -->
+    <div class="modal fade" id="eliminar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eliminar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Está seguro que desea eliminar?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal AGREGARRRRR-->
+    
+    <div class="modal fade agregartcb" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">                        
+                        <div class="form-group col-md-8">
+                            <label>Descripción:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Estado:</label>
+                            <select class="form-control default-select">
+                                <option>Activo</option>
+                                <option>Inactivo</option>
+                            </select>
+                        </div>                
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal EDITARRRR-->
+
+    <div class="modal fade editartcb" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">                        
+                        <div class="form-group col-md-8">
+                            <label>Descripción:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Estado:</label>
+                            <select class="form-control default-select">
+                                <option>Activo</option>
+                                <option>Inactivo</option>
+                            </select>
+                        </div>                
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

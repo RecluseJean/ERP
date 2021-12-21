@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-c-tipo-moneda',
   templateUrl: './c-tipo-moneda.component.html',
-  styleUrls: ['./c-tipo-moneda.component.css']
+  styleUrls: []
 })
 export class CTipoMonedaComponent implements OnInit {
 

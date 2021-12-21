@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-c-condiciones-pago',
   templateUrl: './c-condiciones-pago.component.html',
-  styleUrls: ['./c-condiciones-pago.component.css']
+  styleUrls: []
 })
 export class CCondicionesPagoComponent implements OnInit {
 

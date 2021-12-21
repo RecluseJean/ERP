@@ -1,1 +1,396 @@
-<p>constancias-pagos-cobros works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Tesoreria</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Pagos y Cobranzas</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Constancia de Pagos y Cobros</a></li>
+        </ol>
+    </div>
+
+
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    
+                    <li class="nav-item mr-auto">
+                        <div class="form-group mt-4 ml-3">
+                            <label class="radio-inline mr-3 text-primary" style="font-weight: bolder;"><input type="radio" name="optradio"> Todos</label>
+                            <label class="radio-inline mr-3 text-primary" style="font-weight: bolder;"><input type="radio" name="optradio"> Activos</label>
+                            <label class="radio-inline mr-3 text-primary" style="font-weight: bolder;"><input type="radio" name="optradio"> Inactivos</label>
+                        </div>
+                    </li>                               
+                    <li class="nav-item">
+                        <div class="input-group diet-search ml-2">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                    
+                </ul>
+                <!-- -->
+                <div class="table-responsive">
+                    <table class="table header-border table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>Nro</th>
+                                <th>Codigo</th>
+                                <th>Destino</th>
+                                <th>Tipo Operación</th>
+                                <th>Glosa</th>
+                                <th>Tipo Pago</th>
+                                <th>Moneda</th>
+                                <th>Importe</th>
+                                <th>Tipo Cambio</th>
+                                <th>Documento Transacc.</th>
+                                <th>Nro Transacc.</th>
+                                <th>Fecha Transacc.</th>
+                                <th>Fecha Registro</th>
+                                <th>Estado</th>
+                                <th>Editar / Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Boleta
+                                </td>
+                                <td>0000000375</td>
+                                <td>Cashito SAC</td>
+                                <td>01/01/2000</td>
+                                <td>01/01/2000</td>
+                                <td>
+                                    9.00
+                                </td>
+                                <td>
+                                    9.00
+                                </td>
+                                <td>
+                                    1.44
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td><span class="badge badge-success">Activo</span></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".editarRegistroPago"><i class="mdi  mdi-pencil" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Factura
+                                </td>
+                                <td>0000000376</td>
+                                <td>Cashito SAC</td>
+                                <td>01/01/2000</td>
+                                <td>01/01/2000</td>
+                                <td>
+                                    8.00
+                                 </td>
+                                <td>
+                                   8.00
+                                </td>
+                                <td>
+                                    1.50
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td><span class="badge badge-danger">Inactivo</span></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".editarRegistroPago"><i class="mdi  mdi-pencil" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- -->
+            </div>
+            <nav>
+                <ul class="pagination pagination-gutter">
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-left"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- SEPARADOR XD -->
+<!-- SEPARADOR XD -->
+<!-- SEPARADOR XD -->
+
+<div class="modal fade editarRegistroPago" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h3 class="modal-title mt-3 ml-3" style="color: black;">Registrar Pago</h3>                
+                
+                <div class="btn-group m-b-10 m-r-10 " role="group">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary font-18" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Mostrar PDF"><i
+                    class="mdi mdi-file-pdf"></i></button>
+                        <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Acciones
+                </button>
+                        <div class="dropdown-menu ">
+        
+        
+                            <a class="dropdown-item pointer">Ingresar Pago</a>
+        
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal " id="loginform">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+
+                                <div class="form-row">                                  
+                                    <div class="col-sm-3">
+                                        <h5>Medio de Pago :</h5>
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona el Tipo Documento</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>                                         
+                                        </select>                                                                        
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Tipo de Cambio :</h5>
+                                        <div class="controls">
+                                            <input type="text" name="codigo" maxlength="20" class="form-control" aria-invalid="false">
+                                            <div class="help-block"></div>
+                                        </div>                                                                        
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Fecha Emisión :</h5>
+                                        <div class="controls">
+                                            <input type="date" name="codigo" maxlength="20" class="form-control" aria-invalid="false">
+                                            <div class="help-block"></div>
+                                        </div>                                                                        
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Estado :</h5>
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona el Proyecto</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>                                         
+                                        </select>                                                                        
+                                    </div>
+                                                                                              
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+
+                                <div class="form-row">                                  
+                                    <div class="col-sm-3">
+                                        <h5>Destino :</h5>
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona el Proyecto</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>                                         
+                                        </select>                                                                        
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Tipo Moneda :</h5>
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona el Tipo Concepto</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>                                         
+                                        </select>                                                                        
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h5>Caja :</h5>
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona el Tipo Concepto</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>                                         
+                                        </select>                                                                        
+                                    </div>                                     
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-5">
+
+                                <div class="form-row">
+                                    <div class="col-sm-6">
+                                        <h5>Importe :</h5>
+                                        <div class="controls">
+                                            <input type="text" name="codigo" maxlength="20" class="form-control" aria-invalid="false">
+                                            <div class="help-block"></div>
+                                        </div>                                                                        
+                                    </div>
+                                    
+                                    <div class="col-sm-6">
+                                        <h5>Glosa :</h5>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" aria-invalid="false">
+                                            <div class="help-block"></div>
+                                        </div>                                                                        
+                                    </div>
+                                    
+                                    
+                                                                                             
+                                </div>
+                            </div>
+
+                        </div>
+                
+                
+                
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs customtab" role="tablist">
+                                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#detallesfactura" role="tab"><span
+                                class="hidden-sm-up"><i class="mdi mdi-view-list"></i></span> <span class="hidden-xs-down">Documentos Asociados</span></a> </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="detallesfactura" role="tabpanel">
+                
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered verticle-middle table-responsive-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Task</th>
+                                                        <th scope="col">Progress</th>
+                                                        <th scope="col">Deadline</th>
+                                                        <th scope="col">Label</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Air Conditioner</td>
+                                                        <td>
+                                                            <div class="progress bgl-primary">
+                                                                <div class="progress-bar bg-primary" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Apr 20,2018</td>
+                                                        <td><span class="badge badge-primary light">70%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Textiles</td>
+                                                        <td>
+                                                            <div class="progress bgl-success">
+                                                                <div class="progress-bar bg-success" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>May 27,2018</td>
+                                                        <td><span class="badge badge-success">70%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Milk Powder</td>
+                                                        <td>
+                                                            <div class="progress bgl-dark">
+                                                                <div class="progress-bar bg-dark" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>May 18,2018</td>
+                                                        <td><span class="badge badge-dark light">70%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Vehicles</td>
+                                                        <td>
+                                                            <div class="progress bgl-danger">
+                                                                <div class="progress-bar bg-danger" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Mar 27,2018</td>
+                                                        <td><span class="badge badge-danger">70%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Boats</td>
+                                                        <td>
+                                                            <div class="progress bgl-warning">
+                                                                <div class="progress-bar bg-warning" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Jun 28,2018</td>
+                                                        <td><span class="badge badge-warning">70%</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                
+                                    </div>
+                                </div>
+                
+                            </div>
+                        </div>
+                
+                
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary light">Guardar</button>
+            </div>
+        </div>
+    </div> 
+</div>
