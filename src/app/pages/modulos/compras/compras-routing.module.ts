@@ -104,9 +104,9 @@ const routesDash : Routes = [
       { path: 'configuracion/motivo-traslado', component: MotivosTrasladoCComponent},  
       { path: 'configuracion/tipo-movimiento-almacen', component: TipoMovAlmacenCComponent},  
       { path: 'configuracion/codigos-aduana', component: CodigosAduanaCComponent},  
-      { path: 'configuracion/proyectos', component: ResponsableCComponent},  
-      { path: 'configuracion/marcas', component: ProyectosCComponent},  
-      { path: 'configuracion/responsable', component: MarcasCComponent},  
+      { path: 'configuracion/proyectos', component:ProyectosCComponent },  
+      { path: 'configuracion/marcas', component: MarcasCComponent},  
+      { path: 'configuracion/responsable', component: ResponsableCComponent},  
       { path: 'configuracion/tipos-concepto', component: TiposConceptoCComponent},  
       { path: 'configuracion/unidades-medida', component: UnidadesMedidasCComponent},  
             
