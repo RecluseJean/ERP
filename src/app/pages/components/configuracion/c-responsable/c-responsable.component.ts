@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-c-responsable',
   templateUrl: './c-responsable.component.html',
-  styleUrls: ['./c-responsable.component.css']
+  styleUrls: []
 })
 export class CResponsableComponent implements OnInit {
 

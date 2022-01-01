@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-c-punto-venta',
   templateUrl: './c-punto-venta.component.html',
-  styleUrls: ['./c-punto-venta.component.css']
+  styleUrls: []
 })
 export class CPuntoVentaComponent implements OnInit {
 
