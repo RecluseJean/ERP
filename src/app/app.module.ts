@@ -23,6 +23,7 @@ import { ContabilidadModule } from './pages/modulos/contabilidad/contabilidad.mo
 import { ConfiguracionModule } from './pages/modulos/configuracion/configuracion.module';
 import { PuntoVentaModule } from './pages/modulos/punto-venta/punto-venta.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

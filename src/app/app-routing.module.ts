@@ -14,6 +14,8 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'signin', pathMatch: 'full' },  
 
+
+
   {
     path: '',
     loadChildren: () => import ('./pages/modulos/compras/compras.module').then(module =>module.ComprasModule)

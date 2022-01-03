@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-c-cajas',
   templateUrl: './c-cajas.component.html',
-  styleUrls: ['./c-cajas.component.css']
+  styleUrls: []
 })
 export class CCajasComponent implements OnInit {
 

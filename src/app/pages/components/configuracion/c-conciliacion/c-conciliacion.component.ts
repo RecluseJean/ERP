@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-c-conciliacion',
   templateUrl: './c-conciliacion.component.html',
-  styleUrls: ['./c-conciliacion.component.css']
+  styleUrls: []
 })
 export class CConciliacionComponent implements OnInit {
 
