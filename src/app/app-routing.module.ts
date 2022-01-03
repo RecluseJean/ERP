@@ -14,7 +14,10 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'signin', pathMatch: 'full' },  
 
-
+  {
+    path: '',
+    loadChildren: () => import ('./pages/modulos/profile/profile.module').then(module =>module.ProfileModule)
+  },
 
   {
     path: '',
