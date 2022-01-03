@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-categoria-productos-c',
   templateUrl: './categoria-productos-c.component.html',
-  styleUrls: []
+  styleUrls: ['./categoria-productos-c.component.css']
 })
 export class CategoriaProductosCComponent implements OnInit {
 
