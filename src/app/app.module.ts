@@ -12,6 +12,8 @@ import { SignInModule } from './pages/sign-in/sign-in.module';
 import { SignUpModule } from './pages/sign-up/sign-up.module';
 //Profile
 import { ProfileModule } from './pages/modulos/profile/profile.module';
+//Dashboard
+import { DashboardModule } from './pages/modulos/dashboard/dashboard.module';
 //Password
 import { PasswordModule } from './pages/password/password.module';
 //Dashboard
@@ -39,7 +41,8 @@ import { PuntoVentaModule } from './pages/modulos/punto-venta/punto-venta.module
     ProfileModule,
 
     HomeModule,
-
+    DashboardModule,
+    
     PasswordModule,
 
     SignInModule,
