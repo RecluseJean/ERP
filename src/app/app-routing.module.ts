@@ -11,8 +11,17 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },   
   { path: 'password', component: ForgotPasswordComponent },   
   { path: 'home', component: HomeComponent },   
-
   { path: '', redirectTo: 'signin', pathMatch: 'full' },  
+
+  {
+    path: '',
+    loadChildren: () => import ('./pages/modulos/dashboard/dashboard.module').then(module =>module.DashboardModule)
+  },
+
+  {
+    path: '',
+    loadChildren: () => import ('./pages/modulos/profile/profile.module').then(module =>module.ProfileModule)
+  },
 
   {
     path: '',
