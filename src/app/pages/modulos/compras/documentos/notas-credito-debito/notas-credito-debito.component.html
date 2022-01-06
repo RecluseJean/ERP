@@ -12,30 +12,26 @@
             <div class="card-header">                
                 <form class="col-sm-12 mt-3">  
                     <div class="form-row">
-                        <div class="col-sm-3">
-                            <div class="input-group mb-2 diet-search col-sm-12">
-                                <input type="text" class="form-control col-sm-12" placeholder="Buscar">
-                                <div class="input-group-append">
-                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </div>
-                            </div> 
-                        </div>   
-                        <div class="col-sm-3 mr-auto">
-                            <div class="form-group">
-                                <select class="form-control default-select col-sm-12">
-                                    <option selected disabled>Estado</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
+                        <div class="input-group mb-3 diet-search mr-4">
+                            <input type="text" class="form-control" placeholder="Search Menus here">
+                            <div class="input-group-append">
+                                <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </div>
-                        </div>   
-                        <div class="">
-                            <a type="button" class="btn btn-info col-sm-12" routerLink="/compras/documentos/notas-credito-debito/agregar">Añadir <span
+                        </div>
+                         
+                        <div class="form-group mr-4">
+                            <a type="button" data-toggle="modal" data-target=".ancd" class="btn btn-info">Agregar<span
                                 class="btn-icon-right"><i class="fa fa-plus"></i></span>
-                            </a> 
-                        </div>       
+                            </a>                        
+                        </div>
+                        <div class="form-group mb-0 ml-auto">
+                            <label class="radio-inline mt-3 mr-3"><input type="radio" name="optradio"> Todos</label>
+                            <label class="radio-inline mt-3 mr-3"><input type="radio" name="optradio"> Activos</label>
+                            <label class="radio-inline mt-3 mr-3"><input type="radio" name="optradio"> Inactivos</label>
+                            <label class="radio-inline mt-3 mr-3"><input type="radio" name="optradio"> Vencidos</label>
+                        </div>
                     </div>
-                </form>                    
+                </form>                      
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -75,7 +71,7 @@
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a routerLink="/compras/documentos/notas-credito-debito/editar" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" data-target=".eancd" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
                                         <a data-toggle="modal" data-target="#eliminar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
@@ -106,4 +102,633 @@
         </div>
     </div>
 
+    <!--Agregar-->
+    <div class="modal fade ancd" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">NUEVO DOCUMENTO</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Documento:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>                        
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Serie:</label>
+                            <input type="text" class="form-control" placeholder="Serie">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Número:</label>
+                            <input type="text" class="form-control" placeholder="Número">
+                        </div>                   
+                        <div class="form-group col-md-4">
+                            <label>Moneda:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>  
+                        </div>   
+                        <div class="form-group col-md-4">
+                            <label>Fecha de Emisión:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                            <!--
+                            <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                            -->
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Fecha de Pago:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                            <!--
+                            <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                            -->
+                        </div>
+                        
+                        <div class="form-group col-md-4">
+                            <label>Proveedor:</label>
+                            <div class="input-group mb-2 diet-search col-md-12">
+                                <input type="text" class="form-control" placeholder="RUC">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" data-toggle="modal" data-target=".proveedores" type="button">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>  
+                        
+                        <div class="form-group col-md-4">
+                            <label>Referencia:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select> 
+                        </div> 
+                        <div class="form-group col-md-4">
+                            <label>Serie ref:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>                        
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Número Referencia:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>                        
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Motivo :</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select> 
+                        </div>  
+                        <div class="form-group col-md-12">
+                            <hr>                                
+                        </div>
+                    </div> 
+                    <div class="default-tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#detalle">Detalle Nota Crédito/Débito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#asiento">Asientos Contables</a>
+                            </li>                   
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="detalle" role="tabpanel">                                                         
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label>Glosa:</label>
+                                            <input type="text" class="form-control" placeholder="Número">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Base Imponible:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Sub Total:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Afecto:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div>   
+                                        <div class="form-group col-md-4">
+                                            <label>Impuesto:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Importe:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Base Documento:</label>
+                                            <input type="text" disabled class="form-control" placeholder="€0.00">
+                                        </div>                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="asiento">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover table-responsive-sm mt-2 text-center">
+                                        <thead class="thead-info">
+                                            <tr>                                					                               
+                                                <th>#</th>
+                                                <th>Cuenta</th>
+                                                <th>Debe</th> 
+                                                <th>Haber</th>
+                                                <th>Glosa</th>                                                                                             
+                                            </tr>
+                                        </thead>
+                                        <tbody>                                       			
+                                            <tr>   
+                                                <td>1</td>                                
+                                                <td>40111001-IMPUESTO GENERAL A LAS VENTAS</td>
+                                                <td>S/.92.25</td>  
+                                                <td>S/.0.00</td>  
+                                                <td>Correcto </td>  
+                                            </tr>                                                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Editar-->
+    <div class="modal fade eancd" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ACTUALIZAR DOCUMENTO</h5>
+                    <div class="form-row">
+                        <div class="col-sm-12 mr-4">                           
+                            <div class="d-flex">
+                                <a class="btn btn-secondary mr-1" title="Mostrar PDF"><i class="fa fa-file-pdf-o"></i></a>
+                                <a class="btn btn-success dropdown-toggle" data-toggle="dropdown">Acciones</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" data-toggle="modal" data-target=".enviarorden">Enviar por Email</a>
+                                    <a class="dropdown-item" data-toggle="modal" data-target=".ingpag">Ingresar Pago</a>
+                                </div>
+                            </div>
+                        </div>                                 
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Documento:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>                        
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Serie:</label>
+                            <input type="text" class="form-control" placeholder="Serie">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Número:</label>
+                            <input type="text" class="form-control" placeholder="Número">
+                        </div>                   
+                        <div class="form-group col-md-4">
+                            <label>Moneda:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>  
+                        </div>   
+                        <div class="form-group col-md-4">
+                            <label>Fecha de Emisión:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                            <!--
+                            <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                            -->
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Fecha de Pago:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                            <!--
+                            <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                            -->
+                        </div>
+                        
+                        <div class="form-group col-md-4">
+                            <label>Proveedor:</label>
+                            <div class="input-group mb-2 diet-search col-md-12">
+                                <input type="text" class="form-control" placeholder="RUC">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" data-toggle="modal" data-target=".proveedores" type="button">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>  
+                        
+                        <div class="form-group col-md-4">
+                            <label>Referencia:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select> 
+                        </div> 
+                        <div class="form-group col-md-4">
+                            <label>Serie ref:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>                        
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Número Referencia:</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>                        
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Motivo :</label>
+                            <select class="form-control default-select">
+                                <option selected disabled>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select> 
+                        </div>  
+                        <div class="form-group col-md-12">
+                            <hr>                                
+                        </div>
+                    </div> 
+                    <div class="default-tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#detalle">Detalle Nota Crédito/Débito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#asiento">Asientos Contables</a>
+                            </li>                   
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="detalle" role="tabpanel">                                                         
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label>Glosa:</label>
+                                            <input type="text" class="form-control" placeholder="Número">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Base Imponible:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Sub Total:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Afecto:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div>   
+                                        <div class="form-group col-md-4">
+                                            <label>Impuesto:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Importe:</label>
+                                            <input type="text" class="form-control" placeholder="Serie">
+                                        </div> 
+                                        <div class="form-group col-md-4">
+                                            <label>Base Documento:</label>
+                                            <input type="text" disabled class="form-control" placeholder="€0.00">
+                                        </div>                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="asiento">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover table-responsive-sm mt-2 text-center">
+                                        <thead class="thead-info">
+                                            <tr>                                					                               
+                                                <th>#</th>
+                                                <th>Cuenta</th>
+                                                <th>Debe</th> 
+                                                <th>Haber</th>
+                                                <th>Glosa</th>                                                                                             
+                                            </tr>
+                                        </thead>
+                                        <tbody>                                       			
+                                            <tr>   
+                                                <td>1</td>                                
+                                                <td>40111001-IMPUESTO GENERAL A LAS VENTAS</td>
+                                                <td>S/.92.25</td>  
+                                                <td>S/.0.00</td>  
+                                                <td>Correcto </td>  
+                                            </tr>                                                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Enviar-->
+    <div class="modal fade enviarorden" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Enviar Orden de compra por Email</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Para:</label>
+                            <input type="text" class="form-control" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label>Título:</label>
+                            <input type="text" class="form-control" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label>Mensaje:</label>
+                            <div class="card-body">
+                                <div class="summernote"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Ingresar Pago-->
+    <div class="modal fade ingpag" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">REGISTRAR PAGO</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Tipo mediopago:</label>
+                            <select class="form-control">
+                                <option >medio 1</option>
+                                <option >medio 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Tipo de cambio:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Fecha de Emisión:</label>
+                            <input type="date" class="form-control">
+                        </div>  
+                        <div class="form-group col-md-3">
+                            <label>Estado:</label>
+                            <select class="form-control">
+                                <option >Activo</option>
+                                <option >Inactivo</option>
+                            </select>
+                        </div>      
+                        <div class="form-group col-md-3">
+                            <label>Destino:</label>
+                            <select class="form-control">
+                                <option >Banco</option>
+                                <option >Caja</option>
+                            </select>
+                        </div>    
+                        <div class="form-group col-md-3">
+                            <label>Tipo moneda:</label>
+                            <select class="form-control">
+                                <option >Soles</option>
+                                <option >Intis</option>
+                            </select>
+                        </div>  
+                        <div class="form-group col-md-3">
+                            <label>Banco:</label>
+                            <select class="form-control">
+                                <option >Banco 1</option>
+                                <option >Banco 2</option>
+                            </select>
+                        </div>   
+                        <div class="form-group col-md-3">
+                            <label>Código Transacción:</label>
+                            <select class="form-control">
+                                <option >Soles</option>
+                                <option >Intis</option>
+                            </select>
+                        </div>     
+                        <div class="form-group col-md-6">
+                            <label>Caja:</label>
+                            <select class="form-control">
+                                <option >Empleado 1</option>
+                                <option >Empleado 2</option>
+                            </select>
+                        </div>  
+                        <div class="form-group col-md-4">
+                            <label>Importe:</label>
+                            <input type="text" class="form-control">
+                        </div>   
+                        <div class="form-group col-md-8">
+                            <label>Glosa:</label>
+                            <input type="text" class="form-control">
+                        </div>    
+                    </div>
+
+                    <div class="table-responsive mt-4">
+                        <table class="table table-hover table-responsive-sm mt-2 text-center">
+                            <thead class="thead-info">
+                                <tr>                                					                               
+                                    <th>#</th>
+                                    <th>Cuenta</th>
+                                    <th>Debe</th> 
+                                    <th>Haber</th>
+                                    <th>Glosa</th>                                                                                             
+                                </tr>
+                            </thead>
+                            <tbody>                                       			
+                                <tr>   
+                                    <td>1</td>                                
+                                    <td>40111001-IMPUESTO GENERAL A LAS VENTAS</td>
+                                    <td>S/.92.25</td>  
+                                    <td>S/.0.00</td>  
+                                    <td>Correcto </td>  
+                                </tr>                                                                           
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Proveedor-->
+    <div class="modal fade proveedores" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">PROVEEDORES</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                        
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <h5>Seleccione un proveedor del listado</h5>
+                            </div> 
+                        </div> 
+                        <div class="col-sm-6">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>                                      
+                    </div>     
+                    <hr>   
+                    <div class="table-responsive">
+                        <table class="table table-hover table-responsive-sm">
+                            <thead class="thead-info">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Tipo</th>
+                                    <th>Nro Documento</th>
+                                    <th>Dirección facturación</th>
+                                    <th>Teléfono</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Pagoda S.A</th>
+                                    <td>Natural</td>                                
+                                    <td>65656521</td>
+                                    <td>Jr. Miraflowers 545</td> 
+                                    <td>989898989</td>                                       
+                                </tr>                           
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!--Producto-->
+    <div class="modal fade producto" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">PRODUCTO/SERVICIO </h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                        
+                    <div class="form-row">
+                        <div class="col-sm-4">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <h5>Seleccione un producto del listado</h5>
+                            </div> 
+                        </div> 
+                        <div class="col-sm-4">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>                       
+                                
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <select class="form-control default-select">
+                                    <option selected disabled>Buscar Por</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>                 
+                    </div>     
+                    <hr>   
+                    <div class="table-responsive">
+                        <table class="table table-hover table-responsive-sm">
+                            <thead class="thead-info">
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Marca</th>
+                                    <th>Nombre</th>
+                                    <th>Unidad Medida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>00004</th>
+                                    <td>-</td>                                
+                                    <td>Frutas Deshidratadas</td>
+                                    <td>Unidades</td>                                        
+                                </tr>                           
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
 </div>
