@@ -1,1 +1,338 @@
-<p>movimiento-mercaderia works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Almacenes</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Movimientos</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Movimientos de Mercadería</a></li>
+        </ol>
+    </div>
+
+
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    
+                    <li class="nav-item mr-auto">
+                        <div class="form-group mt-4 ml-3">
+                            <label class="radio-inline mr-3 text-primary" style="font-weight: bolder;"><input type="radio" name="optradio"> Todos</label>
+                            <label class="radio-inline mr-3 text-primary" style="font-weight: bolder;"><input type="radio" name="optradio"> Activos</label>
+                            <label class="radio-inline mr-3 text-primary" style="font-weight: bolder;"><input type="radio" name="optradio"> Inactivos</label>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button data-toggle="modal" data-target=".modaltab" type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
+                            class="btn-icon-left text-primary"><i class="fa fa-plus" style="font-size: 20px; color: #2BC155;"></i>
+                        </span>Agregar</button>
+                    </li>
+                                                  
+                    <li class="nav-item">
+                        <div class="input-group diet-search ml-2">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                    
+                </ul>
+                <!-- -->
+                <div class="table-responsive">
+                    <table class="table header-border table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>Nro</th>
+                                <th>Marca</th>
+                                <th>Tipo</th>
+                                <th>Nombre</th>
+                                <th>Fecha Registro</th>
+                                <th>Stock Minimo</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>101
+                                </td>
+                                <td>Local 1</td>
+                                <td>
+                                    9.00
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td>
+                                    10.44
+                                </td>
+                                <td><span class="badge badge-success">Activo</span></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".editarCuentaporPagar"><i class="mdi  mdi-pencil" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>102
+                                </td>
+                                <td>Local 2</td>
+                                <td>
+                                   8.00
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td>
+                                    9.50
+                                </td>
+                                <td><span class="badge badge-danger">Inactivo</span></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".editarCuentaporPagar"><i class="mdi  mdi-pencil" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- -->
+            </div>
+            <nav>
+                <ul class="pagination pagination-gutter">
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-left"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- SEPARADOR XD -->
+<!-- SEPARADOR XD -->
+<!-- SEPARADOR XD -->
+
+<!-- SEPARADOR XD -->
+<!-- SEPARADOR XD -->
+<!-- Agregar Cliente -->
+
+<div class="modal fade modaltab" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nuevo Orden Guía</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label>Serie:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>                        
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Código:</label>
+                        <input type="text" class="form-control" placeholder="Código">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Fecha de Registro:</label>
+                        <input type="date" class="form-control" placeholder="Fecha">
+                        <!--
+                        <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        -->
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Tipo Operación:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>  
+                    </div>   
+                 
+
+                    <div class="form-group col-md-3">
+                        <h4>Nombre Empresa</h4>
+                        <h5>0123456789</h5>
+                        <h5>Dirección</h5>
+                        <h5>987654321</h5>
+                         
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        
+                    </div> 
+                    <div class="form-group col-md-3">
+                        
+                    </div> 
+                    <div class="form-group col-md-3">
+                        
+                    </div> 
+
+                    <div class="form-group col-lg col-md-3">
+                        <label>Dirección Remitente:</label>
+                        <input type="text" class="form-control" placeholder="Dirección Remiente">
+                    </div>
+                    <div class="form-group col-lg col-md-3">
+                        <label>Dirección Guía:</label>
+                        <input type="text" class="form-control" placeholder="Dirección Guía">
+                    </div> 
+
+                    <div class="pt-4">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-responsive-sm mt-2 text-center">
+                                    <thead class="thead-info">
+                                        <tr>                                					                               
+                                            <th>Código / Fecha mov</th>
+                                            <th>Producto / Empleado</th>
+                                            <th>Cantidad / Almacen</th>                                                                                             
+                                            <th>Unidad medida / Origen</th>                                                                                                                                                                                                                                                                                     
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>   			
+                                            <td>1</td>                                
+                                            <td>656565656</td>  
+                                            <td>656565656</td>  
+                                            <td>20/01/21</td>
+                                        </tr>                                                                           
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>      
+                               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Editar Cliente -->
+
+<div class="modal fade editarCuentaporPagar" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Orden Guía</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label>Serie:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>                        
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Código:</label>
+                        <input type="text" class="form-control" placeholder="Código">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Fecha de Registro:</label>
+                        <input type="date" class="form-control" placeholder="Fecha">
+                        <!--
+                        <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        -->
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Tipo Operación:</label>
+                        <select class="form-control default-select">
+                            <option selected disabled>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>  
+                    </div>   
+                 
+
+                    <div class="form-group col-md-3">
+                        <h4>Nombre Empresa</h4>
+                        <h5>0123456789</h5>
+                        <h5>Dirección</h5>
+                        <h5>987654321</h5>
+                         
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        
+                    </div> 
+                    <div class="form-group col-md-3">
+                        
+                    </div> 
+                    <div class="form-group col-md-3">
+                        
+                    </div> 
+
+                    <div class="form-group col-lg col-md-3">
+                        <label>Dirección Remitente:</label>
+                        <input type="text" class="form-control" placeholder="Dirección Remiente">
+                    </div>
+                    <div class="form-group col-lg col-md-3">
+                        <label>Dirección Guía:</label>
+                        <input type="text" class="form-control" placeholder="Dirección Guía">
+                    </div> 
+
+                    <div class="pt-4">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-responsive-sm mt-2 text-center">
+                                    <thead class="thead-info">
+                                        <tr>                                					                               
+                                            <th>Código / Fecha mov</th>
+                                            <th>Producto / Empleado</th>
+                                            <th>Cantidad / Almacen</th>                                                                                             
+                                            <th>Unidad medida / Origen</th>                                                                                                                                                                                                                                                                                     
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>   			
+                                            <td>1</td>                                
+                                            <td>656565656</td>  
+                                            <td>656565656</td>  
+                                            <td>20/01/21</td>
+                                        </tr>                                                                           
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>      
+                               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
